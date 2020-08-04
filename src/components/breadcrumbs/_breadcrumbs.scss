@@ -1,0 +1,67 @@
+.path {
+  margin-top: 56px;
+}
+
+.page-title {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: bold;
+  font-size: 40px;
+  line-height: 49px;
+  text-transform: uppercase;
+  margin: 0 0 7px 0;
+
+  color: #1e0606;
+}
+
+.breadcrumbs-list {
+  padding-left: 0;
+  padding-top: 10px;
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+  margin-top: 5px;
+  margin-bottom: 20px;
+}
+
+.breadcrumbs-item {
+  margin: 0 10px;
+}
+
+.breadcrumbs-item:nth-child(1) {
+  margin-left: 0;
+}
+
+.breadcrumbs-link {
+  font-family: "Crimson Text";
+  font-style: italic;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 25px;
+  text-transform: capitalize;
+  transition: 0.3s;
+  outline: none;
+
+  min-width: 35px;
+
+  color: #1e0606;
+}
+
+.breadcrumbs-link:hover {
+  opacity: 0.5;
+  text-decoration-line: underline;
+}
+
+.breadcrumbs-link:focus {
+  opacity: 0.5;
+  text-decoration-line: underline;
+}
+
+.breadcrumbs-link:active {
+  opacity: 0.2;
+  text-decoration-line: none;
+}
+
+.breadcrumbs-link_active {
+  opacity: 0.5;
+}

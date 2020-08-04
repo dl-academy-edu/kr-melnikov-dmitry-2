@@ -1,0 +1,48 @@
+      <div class="form-row">
+      <div class="form-cell-100">
+        <label class="form-lable">
+          <input class="input-text input_js" type="text" name="name" />
+          <span class="input-label-text">Name</span>
+        </label>
+      </div>
+      <div class="form-cell-50">
+        <label class="form-lable">
+          <input class="input-text" type="tel" name="phone" />
+          <span class="input-label-text">Phone</span>
+        </label>
+      </div>
+      <div class="form-cell-50">
+        <label class="form-lable">
+          <input class="input-text" type="email" name="email" />
+          <span class="input-label-text">E-mail</span>
+        </label>
+      </div>
+      <label class="form-lable">
+        <textarea
+          class="form-textarea"
+          name="message"
+          cols="70"
+          rows="10"
+        ></textarea>
+        <span class="input-label-text">Message</span>
+      </label>
+      <label class="form-lable-checkbox">
+        <input
+          class="input-checkbox checkbox_js hidden"
+          type="checkbox"
+          name="agreement"
+          value="agreement"
+          onchange="document.querySelector('.button_agree').disabled = !this.checked;"
+        />
+        <span class="modal-label-checkbox"
+          >By clicking on the button, you consent to the processing of your
+          personal data</span
+        >
+      </label>
+      @@include('./button/index.html', {
+        "type":"submit_disabled",
+        "class":"form-button button_agree",
+        "text":"submit"
+      })
+    </div>
+

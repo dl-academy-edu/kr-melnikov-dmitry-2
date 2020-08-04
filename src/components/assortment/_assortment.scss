@@ -1,0 +1,208 @@
+/* Toys Assortment Form*/
+
+.assortment {
+  margin-top: 50px;
+  margin-bottom: 30px;
+
+  background-color: rgba(125, 151, 218, 0.2);
+}
+
+.assortment-form {
+  display: flex;
+  padding: 41px 0 25px;
+  flex-wrap: wrap;
+  position: relative;
+}
+
+.form-legend {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 22px;
+  padding-left: 1px;
+
+  color: #1e0606;
+}
+
+.form-fieldset {
+  border: none;
+  padding: 0;
+  margin-right: 5px;
+}
+
+/* form COST */
+
+.cost {
+  width: 216px;
+  padding-left: 9px;
+  margin-left: 0;
+}
+
+.cost-position {
+  margin: 15px 0 0 7px;
+}
+
+.cost-range {
+  position: relative;
+  margin: 0;
+
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -o-appearance: none;
+
+  width: 188px;
+  height: 4px;
+  outline: none;
+  border: none;
+  background-color: gray;
+}
+
+.cost-range::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -o-appearance: none;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  cursor: pointer;
+  background-image: radial-gradient(
+    circle at center,
+    #ffffff 3.65px,
+    #ffffff 0px,
+    #c29974 0px,
+    #c29974 90%
+  );
+  transition: 0.1s;
+}
+
+.cost-range::-webkit-slider-thumb:hover {
+  opacity: 0.95;
+}
+
+.cost-range::-webkit-slider-thumb:active {
+  opacity: 0.9;
+}
+
+.cost-lable {
+  display: flex;
+  justify-content: space-between;
+  margin: 12px 0 0 -5px;
+}
+
+.cost-lable-point {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 22px;
+
+  color: #1e0606;
+}
+
+/* form COLOR */
+
+.color {
+  margin-left: 87px;
+  padding-left: 2px;
+}
+
+.color-list {
+  list-style-type: none;
+  padding-left: 1px;
+  padding-top: 15px;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+/* form DELIVERY*/
+
+.delivery {
+  margin-left: 115px;
+  padding-left: 3px;
+}
+
+.delivery-list {
+  list-style-type: none;
+  padding-left: 2px;
+  margin-top: 15px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* form AMOUNT */
+
+.amount {
+  margin-left: 60px;
+  padding-left: 3px;
+}
+
+.amount-list {
+  list-style-type: none;
+  padding-left: 0;
+  margin-top: 15px;
+  display: flex;
+}
+
+/* Button Radio */
+
+.button-radio-lable {
+  position: relative;
+}
+
+.button-radio-text {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 22px;
+
+  color: #1e0606;
+
+  margin: 0;
+  width: 80px;
+  height: 35px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.3s;
+
+  background-color: #ffffff;
+}
+
+.button-radio-lable:hover > .button-radio-text {
+  cursor: pointer;
+  color: #877379;
+  background-color: #eddeeb;
+}
+
+.button-radio-input:checked ~ .button-radio-text {
+  cursor: pointer;
+  color: #1E0606;
+  background-color: #f3d0db;
+}
+
+.assortment-button {
+  align-self: start;
+  width: 95px;
+  margin: 36px 0 0 56px;
+}
+
+/* Products catalog */
+
+.products {
+  padding: 1px 0 0 0;
+  margin-top: 55px;
+  margin-bottom: 30px;
+}
+
+.products-list {
+  list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-items: flex-start;
+  padding-left: 0;
+  margin: 0;
+}

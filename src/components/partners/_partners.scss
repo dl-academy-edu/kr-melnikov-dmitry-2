@@ -1,0 +1,29 @@
+.partners {
+    margin-bottom: 113px;
+  }
+  
+  .partners-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    list-style-type: none;
+    padding: 0;
+    align-items: center;
+  }
+  
+  .partner {
+    outline: none;
+    transition: 0.3s;
+  }
+  
+  .partner:hover {
+    opacity: 0.5;
+  }
+  
+  .partner:focus {
+    opacity: 0.5;
+  }
+  
+  .partner:active {
+    opacity: 0.2;
+  }

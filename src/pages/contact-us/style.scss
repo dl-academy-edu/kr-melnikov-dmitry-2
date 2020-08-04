@@ -1,0 +1,51 @@
+.page-content {
+  margin-top: 50px;
+  margin-bottom: 60px;
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Contact Us Form */
+
+.contact-us-form {
+  padding: 20px 40px 42px;
+
+  background-color: #e5eaf8;
+
+  width: 680px;
+
+  margin: 0;
+}
+
+
+/* Text Block */
+
+.text-block {
+  max-width: 380px;
+  margin-top: -2px;
+}
+
+.text-block-point {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 22px;
+  margin-top: 0;
+  margin-bottom: 20px;
+
+  color: #1e0606;
+}
+
+.text-block-main {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 26px;
+  line-height: 34px;
+  margin-top: 20px;
+
+  text-transform: uppercase;
+
+  color: #c29974;
+}

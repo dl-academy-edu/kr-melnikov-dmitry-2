@@ -1,0 +1,84 @@
+.pagenumber {
+  margin-top: 0;
+  margin-bottom: 57px;
+}
+
+.pagenumber-list {
+  list-style-type: none;
+  display: flex;
+  padding-left: 0;
+  align-items: center;
+  margin: 0;
+}
+
+.pagenumber-item {
+  margin-left: 32px;
+  margin-right: 32px;
+  width: 10px;
+}
+
+.pagenumber-item_left {
+  margin-right: auto;
+  margin-left: 0;
+}
+
+.pagenumber-item_right {
+  margin-left: auto;
+  margin-right: 0;
+}
+
+.pagenumber-link {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 20px;
+  text-transform: uppercase;
+  transition: 0.3s;
+
+  color: #1e0606;
+}
+
+.pagenumber-link_active {
+  color: #c29974;
+}
+
+.pagenumber-link:hover {
+  opacity: 0.5;
+}
+
+.pagenumber-link:focus {
+  opacity: 0.5;
+}
+
+.pagenumber-link:active {
+  opacity: 0.2;
+}
+
+.pagenumber-button {
+  display: block;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  background: none;
+  padding: 0;
+  transition: 0.3s;
+}
+
+.pagenumber-button:hover path {
+  fill: #c29974;
+  fill-opacity: 1;
+  transition: 0.3s;
+}
+
+.pagenumber-button:focus path {
+  fill: #c29974;
+  fill-opacity: 1;
+  transition: 0.3s;
+}
+
+.pagenumber-button:active path {
+  fill: #c29974;
+  fill-opacity: 0.5;
+  transition: 0.3s;
+}

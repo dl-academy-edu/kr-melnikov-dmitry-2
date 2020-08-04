@@ -1,0 +1,180 @@
+<footer class="footer">
+  <div class="footer-content">
+    <section class="footer-nav">
+      <h2 class="footer-title">Navigation</h2>
+      <ul class="footer-nav-list">
+        @@include('footer/footer-link.html', {
+          "link":"#",
+          "text":"about us"
+        })
+        @@include('footer/footer-link.html', {
+          "link":"#",
+          "text":"blog"
+        })
+        @@include('footer/footer-link.html', {
+          "link":"#",
+          "text":"design services"
+        })
+        @@include('footer/footer-link.html', {
+          "link":"#",
+          "text":"featured on"
+        })
+        @@include('footer/footer-link.html', {
+          "link":"#",
+          "text":"2018 holiday catalog"
+        })
+        @@include('footer/footer-link.html', {
+          "link":"#",
+          "text":"shop by designer"
+        })        
+      </ul>
+    </section>
+    <section class="footer-customer">
+      <h2 class="footer-title">Customer Information</h2>
+      <ul class="footer-customer-list">
+        @@include('footer/footer-link.html', {
+          "link":"/pages/contact-us",
+          "text":"Contact Us"
+        })
+        @@include('footer/footer-link.html', {
+          "link":"#",
+          "text":"Sale Exclusions"
+        })
+        @@include('footer/footer-link.html', {
+          "link":"#",
+          "text":"Shipping & Returns"
+        })
+        @@include('footer/footer-link.html', {
+          "link":"#",
+          "text":"Terms & Conditions"
+        })
+        @@include('footer/footer-link.html', {
+          "link":"#",
+          "text":"Privacy Policy"
+        })
+        @@include('footer/footer-link.html', {
+          "link":"#",
+          "text":"Search"
+        })
+      </ul>
+    </section>
+    <section class="footer-contact">
+      <h2 class="footer-title">Connect</h2>
+      <form class="join">
+        <input
+          type="email"
+          name="email"
+          class="email-join"
+          placeholder="Email"
+        />
+        @@include('./button/index.html', {
+          "type":"button",
+          "class":"footer-button",
+          "text":"join"
+        })        
+      </form>
+      <ul class="footer-contact-list">
+        @@include('footer/footer-contact-link.html', {
+          "link": "#",
+          "src": "/static/images/facebook.png",
+          "label": "facebook",
+        })
+        @@include('footer/footer-contact-link.html', {
+          "link": "#",
+          "src": "/static/images/twitter.png",
+          "label": "twitter",
+        })
+        @@include('footer/footer-contact-link.html', {
+          "link": "#",
+          "src": "/static/images/pinterest.png",
+          "label": "pinterest",
+        })
+        @@include('footer/footer-contact-link.html', {
+          "link": "#",
+          "src": "/static/images/instagram.png",
+          "label": "instagram",
+        })
+      </ul>
+    </section>
+    <section class="footer-additional">
+      <h2 class="footer-additional-title hidden">additional links</h2>
+      <ul class="footer-additional-list">
+        <li>
+          <div class="rating">
+        <ol class="rating-list">
+          <li class="rating-list-title">
+            <a class="footer-link" href="#">Company Rating</a>
+          </li>
+          <li class="rating-list-point" >
+            <button class="button-transparent rating-button">
+              <img
+                src="/static/images/star.png"
+                alt="One star"
+                width="14"
+                height="13"
+                aria-label="One star"
+              />
+            </button>
+          </li>
+          <li class="rating-list-point" >
+            <button class="rating-button button-transparent">
+              <img
+                src="/static/images/star.png"
+                alt="Two star"
+                width="14"
+                height="13"
+                aria-label="Two star"
+              />
+            </button>
+          </li>
+          <li class="rating-list-point">
+            <button class="rating-button button-transparent">
+              <img
+                src="/static/images/star.png"
+                alt="Three star"
+                width="14"
+                height="13"
+                aria-label="Three star"
+              />
+            </button>
+          </li>
+          <li class="rating-list-point">
+            <button class="rating-button button-transparent">
+              <img
+                src="/static/images/star.png"
+                alt="Four star"
+                width="14"
+                height="13"
+                aria-label="Four star"
+              />
+            </button>
+          </li>
+          <li class="rating-list-point">
+            <button class="rating-button button-transparent">
+              <img
+                src="/static/images/star.png"
+                alt="Five star"
+                width="14"
+                height="13"
+                aria-label="Five star"
+              />
+            </button>
+          </li>
+        </ol>
+          </div>
+        </li>
+        @@include('footer/footer-link.html', {
+          "class":"footer-additional-point",
+          "link":"#",
+          "text":"Copyright © 2018 Dlk • Design Life Kids"
+        })
+        @@include('footer/footer-link.html', {
+          "class":"footer-link_gray footer-additional-point",
+          "link":"#",
+          "text":"Web Design — Direct Line Development"
+        })
+      </ul>
+    </section>
+  </div>
+</footer>
+

@@ -1,0 +1,61 @@
+body {
+  font-family: "Crimson Text", "serif";
+  font-family: "Montserrat", "sans-serif";
+  font-family: "Open Sans", "sans-serif";
+  font-family: "Roboto", "sans-serif";
+}
+
+a {
+  text-decoration: none;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+img {
+  max-width: 100%;
+}
+
+.container {
+  max-width: 1200px;
+  padding: 0 10px;
+  margin: 0 auto;
+}
+
+.hidden {
+  position: absolute !important;
+  clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+  clip: rect(1px, 1px, 1px, 1px);
+  padding: 0 !important;
+  border: 0 !important;
+  height: 1px !important;
+  width: 1px !important;
+  overflow: hidden;
+}
+
+.svg-rotate {
+  transform: rotate(180deg);
+}
+
+// Подключение компонентов
+@import "./header/header";
+@import "./footer/footer";
+@import "./button/button";
+@import "./category-card/category-card";
+@import "./product-card/product-card";
+@import "./partners/partners";
+@import "./poster/poster";
+@import "./useful/useful";
+@import "./blog-content/blog-content";
+@import "./assortment/assortment";
+@import "./breadcrumbs/breadcrumbs";
+@import "./pagenumber/pagenumber";
+@import "./form";
+@import "./contact-us-form/contact-us-form";
