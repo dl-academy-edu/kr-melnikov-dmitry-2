@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@1,400;1,700&family=Montserrat:wght@300;700&family=Open+Sans:wght@400;700&family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://necolas.github.io/normalize.css/8.0.1/normalize.css"
+    />
+    <link rel="stylesheet" href="/common.css" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Contact Us</title>
+  </head>
+  <body>
+    @@include('header/index.html')
+    <main>
+      <section class="path container">
+        <h1 class="page-title">
+          contact us
+        </h1>
+        <div class="breadcrumbs">
+          <ul class="breadcrumbs-list">
+            @@include('breadcrumbs/index.html', {
+              "type": "link", 
+              "link": "/index.html",
+              "label": "Home" 
+            })
+            @@include('breadcrumbs/index.html', {
+              "type": "svg" 
+            })
+            @@include('breadcrumbs/index.html', {
+              "type": "link", 
+              "class": "breadcrumbs-link_active",
+              "link": "/pages/contact-us",
+              "label": "contact us"
+            })   
+          </ul>
+        </div>
+      </section>
+      <section class="page-content container">
+        <h2 class="hidden">Contact Us FORM</h2>
+        <form class="contact-us-form" action="/pages/contact-us/index.html">
+        @@include('contact-us-form/index.html')
+      </form>
+        <div class="text-block">
+          <p class="text-block-point">
+            Our support team are on-hand to assist with any issues you are
+            experiencing.
+          </p>
+          <p class="text-block-point">
+            Please use the form to contact us with your needs. Send us a message
+            and we'll respond as soon as possible.
+          </p>
+          <p class="text-block-main">An expert is waiting to help you!</p>
+        </div>
+      </section>
+    </main>
+    @@include('footer/index.html')
+  </body>
+</html>

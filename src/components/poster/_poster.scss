@@ -1,0 +1,144 @@
+.poster {
+  margin-top: -24px;
+  padding: 0 80px;
+}
+
+.poster-content {
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+  padding-top: 106px;
+  padding-left: 29px;
+  padding-bottom: 89px;
+
+  background: linear-gradient(
+    to bottom,
+    #ffffff 89px,
+    #eee4db 0px,
+    #eee4db 372px
+  );
+}
+
+.poster-title {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: bold;
+  font-size: 40px;
+  line-height: 44px;
+  margin-top: 25px;
+  margin-bottom: 18px;
+  max-width: 307px;
+
+  color: #1e0606;
+}
+
+.poster-switch {
+  order: 0;
+  padding: 0;
+}
+
+.poster-useful {
+  z-index: 1;
+  order: 1;
+  margin: 0;
+  padding: 0;
+  margin-top: 50px;
+  margin-left: 43px;
+  margin-bottom: 0px;
+}
+
+.poster-transparent {
+  order: 2;
+  position: relative;
+  left: 6px;
+  top: -106px;
+  margin-bottom: -195px;
+}
+
+.poster-switch-title {
+  display: block;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 60px;
+  line-height: 73px;
+
+  color: rgba(30, 6, 6, 0.05);
+  margin: 0;
+}
+
+.poster-list {
+  display: block;
+  list-style-type: none;
+  padding-left: 0;
+  margin: 11px 1px;
+}
+
+.poster-text {
+  margin: 19px 0 10px;
+  font-family: "Crimson Text";
+  font-style: italic;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 25px;
+  max-width: 152px;
+
+  color: #1e0606;
+}
+
+.poster-switch-button {
+  display: block;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  height: 3px;
+  width: 31px;
+  margin-bottom: 11px;
+  transition: 0.3s;
+
+  background-color: #d6cac2;
+}
+
+.poster-switch-button_active {
+  background-color: #725f5b;
+}
+
+.poster-switch-button:hover {
+  background-color: #725f5b;
+}
+
+.poster-switch-button:focus {
+  background-color: #725f5b;
+}
+
+.poster-switch-button:active {
+  opacity: 0.5;
+}
+
+.poster-button {
+  margin-top: 19px;
+  margin-right: auto;
+  width: 161px;
+}
+
+.poster-bottom {
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: #c29974;
+}
+
+.poster-bottom-text {
+  display: block;
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 16px;
+  text-transform: uppercase;
+  text-align: center;
+
+  color: #ffffff;
+}

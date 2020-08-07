@@ -1,0 +1,80 @@
+.header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  padding-top: 46px;
+  padding-right: 13px;
+  padding-left: 10px;
+  margin-bottom: 50px;
+}
+
+.header-list {
+  display: flex;
+  flex-wrap: wrap;
+  list-style-type: none;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.header-nav {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 19px;
+  text-transform: uppercase;
+  margin-top: 0;
+  margin-bottom: 0;
+
+  color: #1e0606;
+}
+
+.header-contacts {
+  margin-left: auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  font-weight: bold;
+  list-style-type: none;
+}
+.header-search-button {
+  margin-top: 4px;
+  margin-right: 17px;
+}
+
+.header-link {
+  display: block;
+  margin-right: 20px;
+  font-family: "Open Sans";
+  text-transform: uppercase;
+  font-size: 14px;
+  line-height: 19px;
+  margin-top: 0;
+  margin-bottom: 0;
+  text-align: center;
+  transition: 0.3s;
+  outline: none;
+
+  color: #333333;
+}
+
+.logo {
+  margin-top: 4px;
+}
+
+.header-link_nomargin {
+  margin: -1px 0 0 0;
+  padding: 0;
+}
+
+.header-link:hover {
+  opacity: 0.5;
+}
+
+.header-link:focus {
+  opacity: 0.5;
+}
+
+.header-link:active {
+  opacity: 0.2;
+}

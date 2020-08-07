@@ -1,0 +1,149 @@
+<section class="assortment">
+  <h2 class="assortment-title hidden">assortment form</h2>
+  <form
+    name="assortment"
+    class="assortment-form container"
+    method="get"
+    action="#"
+  >
+    <fieldset class="form-fieldset cost">
+      <legend class="form-legend">Cost</legend>
+      <p class="cost-position">
+        <input
+          type="range"
+          class="cost-range"
+          name="cost"
+          min="0"
+          max="500"
+          value="100"
+        />
+        <label class="cost-lable">
+          <span class="cost-lable-point">0</span>
+          <span class="cost-lable-point">500</span>
+        </label>
+      </p>
+    </fieldset>
+    <fieldset class="form-fieldset color">
+      <legend class="form-legend">Color</legend>
+      <ul class="color-list">
+        <li>
+          <label class="assortment-lable-checkbox">
+            <input
+              class="input-checkbox hidden"
+              type="checkbox"
+              name="color"
+              value="black"
+              checked
+            />
+            <span class="input-label-checkbox">Black</span>
+          </label>
+        </li>
+        <li>
+          <label class="assortment-lable-checkbox">
+            <input
+              class="input-checkbox hidden"
+              type="checkbox"
+              name="color"
+              value="blue"
+            />
+            <span class="input-label-checkbox">Blue</span>
+          </label>
+        </li>
+        <li>
+          <label class="assortment-lable-checkbox">
+            <input
+              class="input-checkbox hidden"
+              type="checkbox"
+              name="color"
+              value="green"
+            />
+            <span class="input-label-checkbox">Green</span>
+          </label>
+        </li>
+        <li>
+          <label class="assortment-lable-checkbox">
+            <input
+              class="input-checkbox hidden"
+              type="checkbox"
+              name="color"
+              value="white"
+            />
+            <span class="input-label-checkbox">White</span>
+          </label>
+        </li>
+      </ul>
+    </fieldset>
+    <fieldset class="form-fieldset delivery">
+      <legend class="form-legend">Delivery</legend>
+      <ul class="delivery-list">
+        <li>
+          <label class="form-lable-radio">
+            <input
+              class="input-radio hidden"
+              type="radio"
+              name="delivery"
+              value="free"
+            />
+            <span class="input-label-radio">Free shipping</span>
+          </label>
+        </li>
+        <li>
+          <label class="form-lable-radio">
+            <input
+              class="input-radio hidden"
+              type="radio"
+              name="delivery"
+              value="fast"
+              checked
+            />
+            <span class="input-label-radio">Fast shipping</span>
+          </label>
+        </li>
+      </ul>
+    </fieldset>
+    <fieldset class="form-fieldset amount">
+      <legend class="form-legend">Amount</legend>
+      <ul class="amount-list">
+        <li>
+          <label class="button-radio-lable">
+            <input
+              class="button-radio-input hidden"
+              type="radio"
+              name="amount"
+              value="0-5"
+              checked
+            />
+            <span class="button-radio-text">0-5</span>
+          </label>
+        </li>
+        <li>
+          <label class="button-radio-lable">
+            <input
+              class="button-radio-input hidden"
+              type="radio"
+              name="amount"
+              value="10-20"
+            />
+            <span class="button-radio-text">10-20</span>
+          </label>
+        </li>
+        <li>
+          <label class="button-radio-lable">
+            <input
+              class="button-radio-input hidden"
+              type="radio"
+              name="amount"
+              value="20-50"
+            />
+            <span class="button-radio-text">20-50</span>
+          </label>
+        </li>
+      </ul>
+    </fieldset>
+    @@include('./button/index.html', {
+      "type":"submit",
+      "class":"assortment-button",
+      "text":"apply"
+    }) 
+  </form>
+</section>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@1,400;1,700&family=Montserrat:wght@300;700&family=Open+Sans:wght@400;700&family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://necolas.github.io/normalize.css/8.0.1/normalize.css"
+    />
+    <link rel="stylesheet" href="/common.css" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Toys</title>
+  </head>
+  <body>
+    @@include('header/index.html')
+    <main>
+      <section class="path container">
+        <h1 class="page-title">
+          toy for kids 
+        </h1>
+        <div class="breadcrumbs">
+          <ul class="breadcrumbs-list">
+            @@include('breadcrumbs/index.html', {
+              "type": "link", 
+              "link": "/index.html",
+              "label": "home" 
+            })
+            @@include('breadcrumbs/index.html', {
+              "type": "svg" 
+            })
+            @@include('breadcrumbs/index.html', {
+              "type": "link", 
+              "link": "/pages/catalog",
+              "label": "catalog" 
+            })
+            @@include('breadcrumbs/index.html', {
+              "type": "svg" 
+            })
+            @@include('breadcrumbs/index.html', {
+              "type": "link", 
+              "class": "breadcrumbs-link_active",
+              "link": "/pages/toys",
+              "label": "toys" 
+            })
+          </ul>
+        </div>
+      </section>
+      @@include('assortment/index.html')
+      <section class="products container">
+        <h2 class="hidden">products list</h2>
+        <ul class="products-list">
+          @@include('product-card/index.html', {
+            "link": "#",
+            "src": "/static/images/sharky-bean-bag-chair-cover.png",
+            "title": "SHARKY BEAN BAG CHAIR COVER",
+            "price": "60.00"
+          })
+          @@include('product-card/index.html', {
+            "link": "#",
+            "src": "/static/images/brass-deco-frames.png",
+            "title": "BRASS DECO FRAMES",
+            "price": "66.00"
+          })
+          @@include('product-card/index.html', {
+            "link": "#",
+            "src": "/static/images/cibo-full-apron.png",
+            "title": "CIBO FULL APRON",
+            "price": "60.00"
+          })
+          @@include('product-card/index.html', {
+            "link": "#",
+            "src": "/static/images/gatcha-gumball-machine.png",
+            "title": "GATCHA GATCHA GUMBALL MACHINE",
+            "price": "56.00"
+          })
+          @@include('product-card/index.html', {
+            "link": "#",
+            "src": "/static/images/christmas-advent-scented-candle.png",
+            "title": "CHRISTMAS ADVENT SCENTED CANDLE",
+            "price": "29.00"
+          })
+          @@include('product-card/index.html', {
+            "link": "#",
+            "src": "/static/images/tangle-spring-tea-light.png",
+            "title": "TANGLE SPINNING TEA LIGHT",
+            "price": "56.00"
+          })
+        </ul>
+      </section>
+      @@include('pagenumber/index.html')
+    </main>
+    @@include('footer/index.html')
+  </body>
+</html>

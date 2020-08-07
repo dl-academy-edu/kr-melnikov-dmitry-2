@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@1,400;1,700&family=Montserrat:wght@300;700&family=Open+Sans:wght@400;700&family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://necolas.github.io/normalize.css/8.0.1/normalize.css"
+    />
+    <link rel="stylesheet" href="/common.css" />
+    <link rel="stylesheet" href="./style.css" />
+    <!-- <link rel="shortcut icon" href="/static/images/favicon.ico" /> -->
+    <title>Home</title>
+  </head>
+  <body>
+    @@include('header/index.html')
+    <main>
+      @@include('poster/index.html')
+      <section class="category container">
+        <h2 class="category-title">CATEGORY PRODUCTS</h2>
+        <ul class="category-list">
+          @@include('category-card/index.html', { "link": "#1", "src":
+          "/static/images/apparel-kids.png", "name": "apparel kids" })
+          @@include('category-card/index.html', { "link": "#2", "src":
+          "/static/images/holiday-shop.png", "name": "holiday shop" })
+          @@include('category-card/index.html', { "link":
+          "/pages/toys/", "src": "/static/images/toys.png", "name":
+          "toys" }) @@include('category-card/index.html', { "link": "#4", "src":
+          "/static/images/accessories.png", "name": "accessories" })          
+        </ul>
+        <div class="category-bottom">          
+          <button
+            class="category-button button-transparent"
+            aria-label="Previous categories"
+          >
+            <svg
+              width="18"
+              height="30"
+              viewBox="0 0 18 30"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path d="M16 2L3 15L16 28" stroke="#1E0606" stroke-width="4" />
+            </svg>
+          </button>
+          <button
+            class="category-button button-transparent"
+            aria-label="Next categories"
+          >
+            <svg
+              class="svg-rotate"
+              width="18"
+              height="30"
+              viewBox="0 0 18 30"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path d="M16 2L3 15L16 28" stroke="#1E0606" stroke-width="4" />
+            </svg>
+          </button>
+          <p class="category-text">
+            Modern finds for the modern home. Curated goods by unique designers
+            around the world from fashion to furniture for kids and adults.
+          </p>
+        </div>
+      </section>
+      @@include('useful/index.html')
+      @@include('partners/index.html')
+      <div class="article-content container">
+        <article class="article article-content-point">
+          <h2 class="article-title">DESIGN LIFE KIDS</h2>
+          <h3 class="article-add-title">About Us</h3>
+          <p class="article-text">
+            Some days i feel like i've been working on dlk my entire life and
+            there are other days that i am completely shocked that four years have
+            flown by. It's simply magical.
+          </p>
+          @@include('./button/index.html', {
+            "type":"link",
+            "link": "#",
+            "class":"article-button",
+            "text":"buy now"
+          })
+        </article>
+        <section class="contacts article-content-point">
+          <h2 class="contacts-title">CONTACTS</h2>
+          <p class="contacts-text">
+            Some days i feel like i've been working on dlk my entire life and
+            there are other days that i am completely shocked that four years have
+            flown by. It's simply magical.
+          </p>
+          <div class="map">
+            <iframe
+              class="map-content"
+              src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d6307.35918005307!2d-122.41793094908978!3d37.77411045351795!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8085809be90f0637%3A0xd558ef250f4addf9!2sBill%20Graham%20Civic%20Auditorium!5e0!3m2!1sen!2sru!4v1594990937935!5m2!1sen!2sru"
+              width="483"
+              height="196"
+              allowfullscreen=""
+              aria-hidden="false"
+              tabindex="0"
+            ></iframe>
+          </div>
+        </section>
+      </div>
+      <div class="modal-bg modal_js"> 
+        <form class="modal-window" action="/pages/contact-us/index.html">
+        @@include('contact-us-form/index.html')
+        <button
+          class="button-close button-close_js"
+          type="button"
+          aria-label="exit"
+        ></button>
+      </form>
+      </div>
+    </main>
+    @@include('footer/index.html')
+    <script src="main.js"></script>
+  </body>
+</html>
