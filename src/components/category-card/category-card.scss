@@ -1,73 +1,77 @@
+@import "../colors";
+@import "../vars";
+@import "../mixins";
+
 .category-card {
   padding: 0px;
   display: flex;
   margin: 5px 10px 18px;
-}
 
-.category-card-link {
-  position: relative;
-  width: 280px;
-  min-height: 270px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  outline: none;
-}
+  &__link {
+    position: relative;
+    width: 280px;
+    min-height: 270px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    outline: none;
 
-.category-card-img {
-  position: absolute;
-  left: auto;
-  top: auto;
-}
+    &[href="#1"] {
+      background-color: $c_green;
+    }
 
-.category-card-link[href="#1"] {
-  background-color: #dbe4db;
-}
+    &[href="#2"] {
+      background-color: rgba($c_brown--card, 0.3);
+    }
 
-.category-card-link[href="#2"] {
-  background-color: rgba(186, 142, 107, 0.3);
-}
+    &[href="/pages/toys/"] {
+      background-color: $c_yellow;
+    }
 
-.category-card-link[href="/pages/toys/index.html"] {
-  background-color: #f8f2da;
-}
+    &[href="#4"] {
+      background-color: rgba($c_blue--dark, 0.17);
+    }
 
-.category-card-link[href="#4"] {
-  background-color: rgba(9, 3, 79, 0.17);
-}
+    &[href="#5"] {
+      background-color: rgba($c_pink, 0.25);
+    }
 
-.category-card-link[href="#5"] {
-  background-color: rgba(207, 68, 111, 0.25);
-}
+    &[href="#6"] {
+      background-color: rgba($c_blue, 0.2);
+    }
 
-.category-card-link[href="#6"] {
-  background-color: rgba(125, 151, 218, 0.2);
-}
+    &:hover > .category-card__name {
+      text-decoration-line: underline;
+    }
 
-.category-card-name {
-  z-index: 0;
-  font-family: "Montserrat";
-  font-style: normal;
-  font-weight: bold;
-  max-width: 192px;
-  font-size: 26px;
-  line-height: 32px;
-  text-align: center;
-  text-transform: uppercase;
-  color: #ffffff;
-  text-shadow: 0px 0px 40px rgba(147, 3, 3, 0.25);
-  transition: 0.3s;
-}
+    &:focus > .category-card__name {
+      text-decoration-line: underline;
+    }
 
-.category-card-link:hover > .category-card-name {
-  text-decoration-line: underline;
-}
+    &:active > .category-card__name {
+      text-decoration-line: underline;
+      opacity: 0.5;
+    }
+  }
 
-.category-card-link:focus > .category-card-name {
-  text-decoration-line: underline;
-}
+  &__img {
+    position: absolute;
+    left: auto;
+    top: auto;
+  }
 
-.category-card-link:active > .category-card-name {
-  text-decoration-line: underline;
-  opacity: 0.5;
+  &__name {
+    z-index: 0;
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: bold;
+    max-width: 192px;
+    font-size: 26px;
+    line-height: 32px;
+    text-align: center;
+    text-transform: uppercase;
+    color: $c_white;
+    text-shadow: 0px 0px 40px rgba($c_red, 0.25);
+    transition: 0.3s;
+  }
 }

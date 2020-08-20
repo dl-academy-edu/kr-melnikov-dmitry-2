@@ -1,3 +1,7 @@
+@import "../../components/colors";
+@import "../../components/vars";
+@import "../../components/mixins";
+
 // Caterory
 .category {
   display: flex;
@@ -5,19 +9,19 @@
   padding: 0;
   margin-top: 44px;
   margin-bottom: 30px;
-}
 
-.category-list {
-  list-style-type: none;
-  display: flex;
-  flex-wrap: wrap;
-  justify-items: flex-start;
-  padding-left: 0;
-  margin: 0;
-}
+  &__list {
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-items: flex-start;
+    padding-left: 0;
+    margin: 0;
+  }
 
-.category-card:nth-child(6n + 4) {
-  margin-left: 210px;
+  &-card:nth-child(6n + 4) {
+    margin-left: 210px;
+  }
 }
 
 // Description
@@ -26,30 +30,29 @@
   margin-top: 30px;
   margin-bottom: 42px;
   padding: 3px 200px;
+
+  &__title {
+    margin: 0 0 25px 10px;
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: bold;
+    font-size: 38px;
+    line-height: 46px;
+    text-transform: uppercase;
+  
+    color: $c_black--light;
+  }
+
+  &__text {
+    max-width: 680px;
+    margin: 5px 0 15px 10px;
+  
+    font-family: "Open Sans";
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 22px;
+  
+    color: $c_black--light;
+  }
 }
-
-.description-title {
-  margin: 0 0 25px 10px;
-  font-family: "Montserrat";
-  font-style: normal;
-  font-weight: bold;
-  font-size: 38px;
-  line-height: 46px;
-  text-transform: uppercase;
-
-  color: #1e0606;
-}
-
-.description-text {
-  max-width: 680px;
-  margin: 5px 0 15px 10px;
-
-  font-family: "Open Sans";
-  font-style: normal;
-  font-weight: normal;
-  font-size: 16px;
-  line-height: 22px;
-
-  color: #1e0606;
-}
-

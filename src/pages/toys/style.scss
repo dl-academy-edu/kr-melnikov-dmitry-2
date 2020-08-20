@@ -1,1 +1,20 @@
+@import "../../components/colors";
+@import "../../components/vars";
+@import "../../components/mixins";
 
+/* Products catalog */
+
+.products {
+  padding: 1px 0 0 0;
+  margin-top: 55px;
+  margin-bottom: 30px;
+
+  &__list {
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-items: flex-start;
+    padding-left: 0;
+    margin: 0;
+  }
+}

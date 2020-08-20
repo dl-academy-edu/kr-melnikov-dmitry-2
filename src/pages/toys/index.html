@@ -19,14 +19,14 @@
     @@include('header/index.html')
     <main>
       <section class="path container">
-        <h1 class="page-title">
+        <h1 class="path__title">
           toy for kids 
         </h1>
         <div class="breadcrumbs">
-          <ul class="breadcrumbs-list">
+          <ul class="breadcrumbs__list">
             @@include('breadcrumbs/index.html', {
               "type": "link", 
-              "link": "/index.html",
+              "link": "/",
               "label": "home" 
             })
             @@include('breadcrumbs/index.html', {
@@ -42,7 +42,7 @@
             })
             @@include('breadcrumbs/index.html', {
               "type": "link", 
-              "class": "breadcrumbs-link_active",
+              "class": "breadcrumbs__link_active",
               "link": "/pages/toys",
               "label": "toys" 
             })
@@ -52,7 +52,7 @@
       @@include('assortment/index.html')
       <section class="products container">
         <h2 class="hidden">products list</h2>
-        <ul class="products-list">
+        <ul class="products__list">
           @@include('product-card/index.html', {
             "link": "#",
             "src": "/static/images/sharky-bean-bag-chair-cover.png",

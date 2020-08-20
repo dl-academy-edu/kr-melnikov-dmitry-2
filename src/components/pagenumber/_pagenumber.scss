@@ -1,84 +1,89 @@
+@import "../colors";
+@import "../vars";
+@import "../mixins";
+
 .pagenumber {
   margin-top: 0;
   margin-bottom: 57px;
-}
 
-.pagenumber-list {
-  list-style-type: none;
-  display: flex;
-  padding-left: 0;
-  align-items: center;
-  margin: 0;
-}
+  &__list {
+    list-style-type: none;
+    display: flex;
+    padding-left: 0;
+    align-items: center;
+    margin: 0;
 
-.pagenumber-item {
-  margin-left: 32px;
-  margin-right: 32px;
-  width: 10px;
-}
+    &__item {
+      margin: 0 32px;
+      width: 10px;
 
-.pagenumber-item_left {
-  margin-right: auto;
-  margin-left: 0;
-}
+      &:first-child {
+        margin-right: auto;
+        margin-left: 0;
+      }
 
-.pagenumber-item_right {
-  margin-left: auto;
-  margin-right: 0;
-}
+      &:last-child {
+        margin-left: auto;
+        margin-right: 6px;
+        margin-top: 2px;
+      }
+    }
+  }
 
-.pagenumber-link {
-  font-family: "Montserrat";
-  font-style: normal;
-  font-weight: bold;
-  font-size: 16px;
-  line-height: 20px;
-  text-transform: uppercase;
-  transition: 0.3s;
+  &__link {
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 20px;
+    text-transform: uppercase;
+    transition: color $tr_duration $tr_easing, opacity $tr_duration $tr_easing;
 
-  color: #1e0606;
-}
+    color: $c_black--light;
 
-.pagenumber-link_active {
-  color: #c29974;
-}
+    &_active {
+      color: $c_brown;
+    }
 
-.pagenumber-link:hover {
-  opacity: 0.5;
-}
+    &:hover {
+      opacity: 0.5;
+    }
 
-.pagenumber-link:focus {
-  opacity: 0.5;
-}
+    :focus {
+      opacity: 0.5;
+    }
 
-.pagenumber-link:active {
-  opacity: 0.2;
-}
+    :active {
+      opacity: 0.9;
+      color: $c_brown;
+    }
+  }
 
-.pagenumber-button {
-  display: block;
-  border: none;
-  cursor: pointer;
-  outline: none;
-  background: none;
-  padding: 0;
-  transition: 0.3s;
-}
+  &__button {
+    display: block;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    background: none;
+    padding: 0;
 
-.pagenumber-button:hover path {
-  fill: #c29974;
-  fill-opacity: 1;
-  transition: 0.3s;
-}
+    & path {
+      transition: fill $tr_duration $tr_easing, fill-opacity $tr_duration $tr_easing;
+    }
 
-.pagenumber-button:focus path {
-  fill: #c29974;
-  fill-opacity: 1;
-  transition: 0.3s;
-}
+    &:hover path {
+      fill: $c_brown;
+      fill-opacity: 1;
+    }
 
-.pagenumber-button:active path {
-  fill: #c29974;
-  fill-opacity: 0.5;
-  transition: 0.3s;
+    &:focus path {
+      fill: $c_brown;
+      fill-opacity: 1;
+    }
+
+    :active path {
+      fill: $c_brown;
+      fill-opacity: 0.5;
+    }
+  }
 }

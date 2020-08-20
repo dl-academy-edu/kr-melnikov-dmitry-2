@@ -19,14 +19,14 @@
     @@include('header/index.html')
     <main>
       <section class="path container">
-        <h1 class="page-title">
+        <h1 class="path__title">
           contact us
         </h1>
         <div class="breadcrumbs">
-          <ul class="breadcrumbs-list">
+          <ul class="breadcrumbs__list">
             @@include('breadcrumbs/index.html', {
               "type": "link", 
-              "link": "/index.html",
+              "link": "/",
               "label": "Home" 
             })
             @@include('breadcrumbs/index.html', {
@@ -34,28 +34,28 @@
             })
             @@include('breadcrumbs/index.html', {
               "type": "link", 
-              "class": "breadcrumbs-link_active",
+              "class": "breadcrumbs__link_active",
               "link": "/pages/contact-us",
               "label": "contact us"
             })   
           </ul>
         </div>
       </section>
-      <section class="page-content container">
-        <h2 class="hidden">Contact Us FORM</h2>
-        <form class="contact-us-form" action="/pages/contact-us/index.html">
+      <section class="contact-us container">
+        <h2 class="contact-us__title hidden">Contact Us FORM</h2>
+        <form class="contact-us__form" action="/pages/contact-us/index.html">
         @@include('contact-us-form/index.html')
       </form>
-        <div class="text-block">
-          <p class="text-block-point">
-            Our support team are on-hand to assist with any issues you are
-            experiencing.
-          </p>
-          <p class="text-block-point">
+        <div class="contact-us__description">
+          <p class="contact-us__description__title">An expert is waiting to help you!</p>
+          <p class="contact-us__description__text">
             Please use the form to contact us with your needs. Send us a message
             and we'll respond as soon as possible.
           </p>
-          <p class="text-block-main">An expert is waiting to help you!</p>
+          <p class="contact-us__description__text">
+            Our support team are on-hand to assist with any issues you are
+            experiencing.
+          </p>
         </div>
       </section>
     </main>

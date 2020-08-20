@@ -1,8 +1,11 @@
+@import "../colors";
+@import "../vars";
+@import "../mixins";
+
 .partners {
-    margin-bottom: 113px;
-  }
-  
-  .partners-list {
+  margin-bottom: 113px;
+
+  &__list {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -10,20 +13,21 @@
     padding: 0;
     align-items: center;
   }
-  
-  .partner {
+
+  &__link {
     outline: none;
-    transition: 0.3s;
+    transition: opacity $tr_duration $tr_easing;
+
+    &:hover {
+      opacity: 0.5;
+    }
+
+    &:focus {
+      opacity: 0.5;
+    }
+
+    &:active {
+      opacity: 0.2;
+    }
   }
-  
-  .partner:hover {
-    opacity: 0.5;
-  }
-  
-  .partner:focus {
-    opacity: 0.5;
-  }
-  
-  .partner:active {
-    opacity: 0.2;
-  }
+}

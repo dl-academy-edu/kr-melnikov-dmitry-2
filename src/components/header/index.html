@@ -1,5 +1,5 @@
 <header class="header container">
-  <a class="logo header-link" href="/index.html" aria-label="Logo">
+  <a class="header__logo header__link" href="/" aria-label="Logo">
     <svg
       width="100"
       height="52"
@@ -23,32 +23,21 @@
       />
     </svg>
   </a>
-  <nav class="header-nav">
-    <ul class="header-list">
-      @@include('header/header-link.html', {
-        "link":"/pages/blog",
-        "text":"blog"
-      })
-      @@include('header/header-link.html', {
-        "link":"/pages/catalog",
-        "text":"catalog"
-      })
-      @@include('header/header-link.html', {
-        "link":"#",
-        "text":"about us"
-      })
+  <nav class="header__nav">
+    <ul class="header__nav__list">
+      @@include('header/header__link.html', { "link":"/pages/blog",
+      "text":"blog" }) @@include('header/header__link.html', {
+      "link":"/pages/catalog", "text":"catalog" })
+      @@include('header/header__link.html', { "link":"#", "text":"about us" })
     </ul>
   </nav>
-  <ul class="header-contacts">
-    <li>
-      <button class="header-search-button button-transparent">
+  <ul class="header__contacts">
+    <li class="header__list-item">
+      <button class="button button_transparent header__button_search">
         <img src="/static/images/search.png" alt="Search" aria-label="Search" />
       </button>
     </li>
-    @@include('header/header-link.html', {
-      "class":"header-link_nomargin",
-      "link":"/pages/contact-us",
-      "text":"contact us"
-    })
+    @@include('header/header__link.html', { "class":"header__link_last" ,
+    "link":"/pages/contact-us", "text":"contact us" })
   </ul>
 </header>

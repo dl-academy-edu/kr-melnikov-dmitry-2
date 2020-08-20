@@ -1,67 +1,73 @@
+@import "../colors";
+@import "../vars";
+@import "../mixins";
+
 .path {
   margin-top: 56px;
+
+  &__title {
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: bold;
+    font-size: 40px;
+    line-height: 49px;
+    text-transform: uppercase;
+    margin: 0 0 7px 0;
+
+    color: $c_black--light;
+  }
 }
 
-.page-title {
-  font-family: "Montserrat";
-  font-style: normal;
-  font-weight: bold;
-  font-size: 40px;
-  line-height: 49px;
-  text-transform: uppercase;
-  margin: 0 0 7px 0;
+.breadcrumbs {
+  &__list {
+    padding-left: 0;
+    padding-top: 10px;
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    margin-top: 5px;
+    margin-bottom: 20px;
 
-  color: #1e0606;
-}
+    &__item {
+      margin: 0 10px;
 
-.breadcrumbs-list {
-  padding-left: 0;
-  padding-top: 10px;
-  list-style-type: none;
-  display: flex;
-  align-items: center;
-  margin-top: 5px;
-  margin-bottom: 20px;
-}
+      &:first-child {
+        margin-left: 0;
+      }
+    }
+  }
 
-.breadcrumbs-item {
-  margin: 0 10px;
-}
+  &__link {
+    font-family: "Crimson Text";
+    font-style: italic;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 25px;
+    text-transform: capitalize;
+    transition: 0.3s;
+    outline: none;
 
-.breadcrumbs-item:nth-child(1) {
-  margin-left: 0;
-}
+    min-width: 35px;
 
-.breadcrumbs-link {
-  font-family: "Crimson Text";
-  font-style: italic;
-  font-weight: normal;
-  font-size: 20px;
-  line-height: 25px;
-  text-transform: capitalize;
-  transition: 0.3s;
-  outline: none;
+    color: $c_black--light;
 
-  min-width: 35px;
+    &:hover {
+      opacity: 0.5;
+      text-decoration-line: underline;
+    }
 
-  color: #1e0606;
-}
+    &:focus {
+      opacity: 0.5;
+      text-decoration-line: underline;
+    }
 
-.breadcrumbs-link:hover {
-  opacity: 0.5;
-  text-decoration-line: underline;
-}
+    &:active {
+      opacity: 0.2;
+      text-decoration-line: none;
+    }
 
-.breadcrumbs-link:focus {
-  opacity: 0.5;
-  text-decoration-line: underline;
-}
-
-.breadcrumbs-link:active {
-  opacity: 0.2;
-  text-decoration-line: none;
-}
-
-.breadcrumbs-link_active {
-  opacity: 0.5;
+    &_active {
+      opacity: 0.5;
+    }
+  }
 }

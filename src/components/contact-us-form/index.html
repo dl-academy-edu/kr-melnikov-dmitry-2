@@ -1,48 +1,44 @@
-      <div class="form-row">
-      <div class="form-cell-100">
-        <label class="form-lable">
-          <input class="input-text input_js" type="text" name="name" />
-          <span class="input-label-text">Name</span>
-        </label>
-      </div>
-      <div class="form-cell-50">
-        <label class="form-lable">
-          <input class="input-text" type="tel" name="phone" />
-          <span class="input-label-text">Phone</span>
-        </label>
-      </div>
-      <div class="form-cell-50">
-        <label class="form-lable">
-          <input class="input-text" type="email" name="email" />
-          <span class="input-label-text">E-mail</span>
-        </label>
-      </div>
-      <label class="form-lable">
-        <textarea
-          class="form-textarea"
-          name="message"
-          cols="70"
-          rows="10"
-        ></textarea>
-        <span class="input-label-text">Message</span>
-      </label>
-      <label class="form-lable-checkbox">
-        <input
-          class="input-checkbox checkbox_js hidden"
-          type="checkbox"
-          name="agreement"
-          value="agreement"
-          onchange="document.querySelector('.button_agree').disabled = !this.checked;"
-        />
-        <span class="modal-label-checkbox"
-          >By clicking on the button, you consent to the processing of your
-          personal data</span
-        >
-      </label>
-      @@include('./button/index.html', {
-        "type":"submit_disabled",
-        "class":"form-button button_agree",
-        "text":"submit"
-      })
-    </div>
-
+<div class="form-row">
+  <div class="form-cell-100">
+    <label class="input">
+      <input class="input__input input_js" type="text" name="name" />
+      <span class="input__label">Name</span>
+    </label>
+  </div>
+  <div class="form-cell-50">
+    <label class="input">
+      <input class="input__input" type="tel" name="phone" />
+      <span class="input__label">Phone</span>
+    </label>
+  </div>
+  <div class="form-cell-50">
+    <label class="input">
+      <input class="input__input" type="email" name="email" />
+      <span class="input__label">E-mail</span>
+    </label>
+  </div>
+  <label class="input">
+    <textarea
+      class="input__textarea"
+      name="message"
+      cols="70"
+      rows="10"
+    ></textarea>
+    <span class="input__label">Message</span>
+  </label>
+  <label class="checkbox">
+    <input
+      class="checkbox__input checkbox_js hidden"
+      type="checkbox"
+      name="agreement"
+      value="agreement"
+      onchange="document.querySelector('.button_agree_js').disabled = !this.checked;"
+    />
+    <span class="checkbox__label checkbox__label_modal"
+      >By clicking on the button, you consent to the processing of your personal
+      data</span
+    >
+  </label>
+  @@include('./button/index.html', { "type":"submit_disabled",
+  "class":"form-button button_agree_js", "text":"submit" })
+</div>

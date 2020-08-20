@@ -19,14 +19,14 @@
     @@include('header/index.html')
     <main>
       <section class="path container">
-        <h1 class="page-title">
+        <h1 class="path__title">
           CATEGORY PRODUCTS
         </h1>
         <div class="breadcrumbs">
-          <ul class="breadcrumbs-list">
+          <ul class="breadcrumbs__list">
             @@include('breadcrumbs/index.html', {
               "type": "link", 
-              "link": "/index.html",
+              "link": "/",
               "label": "Home" 
             })
             @@include('breadcrumbs/index.html', {
@@ -34,7 +34,7 @@
             })
             @@include('breadcrumbs/index.html', {
               "type": "link", 
-              "class": "breadcrumbs-link_active",
+              "class": "breadcrumbs__link_active",
               "link": "/pages/catalog",
               "label": "catalog"
             }) 
@@ -43,9 +43,9 @@
       </section>
       <section class="category container">
         <a href="/pages/catalog/index.html">
-          <h2 class="category-title hidden">category's catalog</h2>
+          <h2 class="category__title hidden">category's catalog</h2>
         </a>
-        <ul class="category-list">
+        <ul class="category__list">
           @@include('category-card/index.html', { "link": "#1", "src":
           "/static/images/apparel-kids.png", "name": "apparel kids" })
           @@include('category-card/index.html', { "link": "#2", "src":
@@ -61,18 +61,18 @@
         </ul>
       </section>
       <section class="description container">
-        <h2 class="description-title">PRODUCT DESCRIPTION</h2>
-        <p class="description-text">
+        <h2 class="description__title">PRODUCT DESCRIPTION</h2>
+        <p class="description__text">
           Interactive doll Zapf Creation Baby Born Sister can drink from a
           bottle and almost really cry. You can even bathe her, just like a
           little sister.
         </p>
-        <p class="description-text">
+        <p class="description__text">
           A toy with a height of 43 cm bends its knees, the head rotates, it can
           stand upright. Such a doll will be an excellent choice for a gift for
           a girl from 4 years old.
         </p>
-        <p class="description-text">
+        <p class="description__text">
           The set includes a miniature set of fashionable clothes, a hairbrush,
           a bottle for water, a pair of hairpins and elastic bands for hair, as
           well as two bracelets: one for the doll, the other for her young
