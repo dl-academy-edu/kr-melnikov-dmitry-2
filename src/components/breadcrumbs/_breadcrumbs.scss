@@ -5,6 +5,10 @@
 .path {
   margin-top: 56px;
 
+  @include media_interval(0, $media_mobile) {
+    margin-top: 20px;
+  }
+
   &__title {
     font-family: "Montserrat";
     font-style: normal;
@@ -15,6 +19,17 @@
     margin: 0 0 7px 0;
 
     color: $c_black--light;
+
+    @include media_interval($media_mobile, $media_tablet) {
+      font-size: 36px;
+      line-height: 44px;
+      margin-left: 8px;
+    }
+
+    @include media_interval(0, $media_mobile) {
+      font-size: 24px;
+      line-height: 29px;
+    }
   }
 }
 
@@ -28,8 +43,23 @@
     margin-top: 5px;
     margin-bottom: 20px;
 
+    @include media_interval($media_mobile, $media_tablet) {
+      padding-top: 4px;
+      padding-left: 8px;
+    }
+
+    @include media_interval(0, $media_mobile) {
+      padding-top: 4px;
+      padding-left: 0;
+    }
+
     &__item {
+      display: block;
       margin: 0 10px;
+
+      @include media_interval(0, $media_mobile) {
+        margin: 0 6px;
+      }
 
       &:first-child {
         margin-left: 0;
@@ -51,6 +81,11 @@
 
     color: $c_black--light;
 
+    @include media_interval(0, $media_mobile) {
+      font-size: 16px;
+      line-height: 20px;
+    }
+
     &:hover {
       opacity: 0.5;
       text-decoration-line: underline;
@@ -68,6 +103,14 @@
 
     &_active {
       opacity: 0.5;
+    }
+  }
+
+  &__svg {
+    @include media_interval(0, $media_mobile) {
+      width: 6px;
+      height: 12px;
+      margin-top: -7px;
     }
   }
 }

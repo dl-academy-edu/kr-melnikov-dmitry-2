@@ -2,28 +2,62 @@
 @import "../../components/vars";
 @import "../../components/mixins";
 
-
+.button-close {
+  display: none;
+}
 .contact-us {
   margin-top: 50px;
   margin-bottom: 60px;
   display: flex;
   justify-content: space-between;
 
+  @include media_interval(0, $media_laptop) {
+    flex-direction: column-reverse;
+    margin-top: 44px;
+  }
+
+  @include media_interval(0, $media_mobile) {
+    margin-top: 26px;
+    margin-bottom: 50px;
+  }
+
   &__form {
     padding: 20px 40px 42px;
-  
     background-color: #e5eaf8;
-  
-    width: 680px;
+    max-width: 680px;
+    width: 100%;
   
     margin: 0;
+
+    @include media_interval($media_mobile, $media_laptop) {
+      margin-top: 44px;
+      padding: 20px 50px 40px 60px;
+    }
+
+    @include media_interval(0, $media_mobile) {
+      margin-top: 25px;
+      padding: 11px 25px 25px;
+    }
+  
   }
 
   &__description {
     max-width: 380px;
+    width: 100%;
     display: flex;
     flex-direction: column-reverse;
     justify-content: flex-end;
+
+    @include media_interval(0, $media_laptop) {
+      align-items: center;
+      max-width: 540px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    @include media_interval(0, $media_mobile) {
+      max-width: 100%;
+    }
 
     &__title {
       font-family: "Montserrat";
@@ -35,6 +69,14 @@
       text-transform: uppercase;
     
       color: #c29974;
+
+      @include media_interval(0, $media_laptop) {
+        text-align: center;
+      }
+
+      @include media_interval(0, $media_mobile) {
+        font-size: 24px;
+      }
     }
 
     &__text {
@@ -47,6 +89,16 @@
       margin-bottom: 20px;
     
       color: #1e0606;
+
+      @include media_interval(0, $media_laptop) {
+        text-align: center;
+      }
+
+      @include media_interval(0, $media_mobile) {
+        font-size: 14px;
+        line-height: 19px;
+        margin-bottom: 15px;
+      }
     }
   }
 }

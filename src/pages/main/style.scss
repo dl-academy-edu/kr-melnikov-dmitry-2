@@ -8,7 +8,17 @@
   display: flex;
   flex-direction: column;
   padding: 0;
-  margin-top: 90px;
+  margin-top: 80px;
+  margin-bottom: 60px;
+  overflow: visible;
+
+  @include media_interval($media_mobile, $media_tablet) {
+    margin-top: 49px;
+  }
+
+  @include media_interval(0, $media_mobile) {
+    margin-top: 69px;
+  }
 
   &__title {
     font-family: "Montserrat";
@@ -17,27 +27,58 @@
     font-size: 38px;
     line-height: 46px;
     text-transform: uppercase;
-    color: #1e0606;
+    color: $c_black--light;
     padding-left: 10px;
-    margin-top: 3px;
-    margin-bottom: 25px;
+    margin-top: 2px;
+    margin-bottom: 20px;
+
+    @include media_interval($media_mobile, $media_tablet) {
+      font-size: 36px;
+      line-height: 44px;
+      margin-bottom: 13px;
+    }
+  
+    @include media_interval(0, $media_mobile) {
+      font-size: 24px;
+      line-height: 29px;
+      margin-bottom: 11px;
+      padding-left: 20px;
+    }
   }
 
   &__list {
     list-style-type: none;
     display: flex;
-    flex-wrap: wrap;
+    overflow-x: auto;
     justify-items: flex-start;
     padding-left: 0;
     margin: 0;
+
+    @include media_interval($media_mobile, $media_laptop) {
+      margin-right: -40px;
+    }
+
+    @include media_interval(0, $media_mobile) {
+      margin-left: 10px;
+    }
   }
 
   &__bottom {
     display: flex;
     align-items: center;
     margin-left: 8px;
-    margin-bottom: 90px;
-    margin-top: 12px;
+    margin-top: 20px;
+
+    @include media_interval($media_mobile, $media_tablet) {
+      margin-left: 10px;
+      margin-top: 18px;
+    }
+
+    @include media_interval(0, $media_mobile) {
+      margin-left: 20px;
+      margin-top: 10px;
+      align-items: flex-start;
+    }
 
     &__button {
       height: 37px;
@@ -45,7 +86,23 @@
       margin-right: 8px;
       padding: 1px 0 0 1px;
 
-      background-color: rgba(112, 187, 220, 0.2);
+      background-color: rgba($c_blue--main, 0.2);
+
+      @include media_interval($media_mobile, $media_tablet) {
+        height: 36px;
+        width: 36px;
+        padding: 3px 10px 0px 8px;
+        margin-right: 6px;
+      }
+
+      @include media_interval(0, $media_mobile) {
+        height: 33px;
+        width: 33px;
+        padding: 3px 10px 0px 8px;
+        margin-right: 6px;
+        margin-top: 3px;
+      }
+      
     }
 
     &__description {
@@ -58,7 +115,21 @@
       font-size: 16px;
       line-height: 22px;
 
-      color: #1e0606;
+      color: $c_black--light;
+
+      @include media_interval(0, $media_tablet) {
+        font-size: 14px;
+        line-height: 19px;
+      }
+
+      @include media_interval($media_mobile, $media_tablet) {
+        margin-left: 13px;
+      }
+
+      @include media_interval(0, $media_mobile) {
+        max-width: 250px;
+        margin-left: 10px;
+      }
     }
   }
 }
@@ -67,37 +138,92 @@
 
 .article-content {
   display: flex;
-  flex-wrap: wrap;
-  align-items: flex-start;
-  margin-bottom: 147px;
+  margin-top: 113px;
+  margin-bottom: 97px;
   padding-right: 47px;
   justify-content: space-between;
+  align-items: flex-start;
+
+  @include media_interval($media_mobile, $media_tablet) {
+    margin-top: 100px;
+    margin-bottom: 75px;
+    padding-right: 10px;
+  }
+
+  @include media_interval(0, $media_mobile) {
+    flex-direction: column;
+    margin-top: 70px;
+    margin-bottom: 147px;
+    padding-right: 0;
+  }
 
   &__point {
     max-width: 543px;
     padding: 30px;
     position: relative;
 
-    background-color: #e1f0f7;
+    background-color: rgba($c_blue--main, 0.2); 
+
+    @include media_interval($media_mobile, $media_tablet) {
+      max-width: 314px;
+      padding: 32px 38px 35px 15px;
+    }
+  
+    @include media_interval(0, $media_mobile) {
+      max-width: 100%;
+      padding: 24px 35px 21px 20px;
+    }
+  }
+}
+
+.article__title, .contacts__title {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: bold;
+  font-size: 38px;
+  line-height: 46px;
+  text-transform: uppercase;
+  position: absolute;
+  top: -26px;
+
+  color: #1e0606;
+
+  @include media_interval($media_mobile, $media_tablet) {
+    font-size: 30px;
+    line-height: 37px;
+    top: -17px;
+    left: 14px;
+  }
+
+  @include media_interval(0, $media_mobile) {
+    font-size: 24px;
+    line-height: 29px;
+    top: -15px;
+    left: 20px;
+  }
+}
+
+.article__description, .contacts__description {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 22px;
+
+  color: #1e0606;
+
+  margin-bottom: 10px;
+
+  @include media_interval(0, $media_mobile) {
+    font-size: 14px;
+    line-height: 19px;      
   }
 }
 
 .article {
+  margin-bottom: 50px;
 
-  &__title {
-    font-family: "Montserrat";
-    font-style: normal;
-    font-weight: bold;
-    font-size: 38px;
-    line-height: 46px;
-    text-transform: uppercase;
-    position: absolute;
-    top: -26px;
-
-    color: #1e0606;
-  }
-
-  &__second-title {
+    &__second-title {
     font-family: "Crimson Text";
     font-style: italic;
     font-weight: normal;
@@ -107,54 +233,47 @@
     margin-bottom: 9px;
 
     color: #1e0606;
-  }
 
-  &__description {
-    font-family: "Open Sans";
-    font-style: normal;
-    font-weight: normal;
-    font-size: 16px;
-    line-height: 22px;
-
-    color: #1e0606;
-
-    margin-bottom: 21px;
+    @include media_interval(0, $media_mobile) {
+      font-size: 24px;
+      line-height: 30px;      
+    }
   }
 
   &__button {
     width: 123px;
     margin-top: 21px;
     margin-bottom: 5px;
+
+    @include media_interval($media_mobile, $media_tablet) {
+      margin-top: 20px;
+      margin-bottom: 0;
+    }
+  
+    @include media_interval(0, $media_mobile) {
+      width: 109px;
+      margin-top: 16px;
+    }
   }
 }
 
 .contacts {
-  padding-bottom: 84px;
+  padding-bottom: 102px;
 
-  &__title {
-    font-family: "Montserrat";
-    font-style: normal;
-    font-weight: bold;
-    font-size: 38px;
-    line-height: 46px;
-    text-transform: uppercase;
-    position: absolute;
-    top: -26px;
+  @include media_interval($media_mobile, $media_tablet) {
+    padding-bottom: 98px;
+  }
 
-    color: #1e0606;
+  @include media_interval(0, $media_mobile) {
+    padding-bottom: 105px;
   }
 
   &__description {
-    font-family: "Open Sans";
-    font-style: normal;
-    font-weight: normal;
-    font-size: 16px;
-    line-height: 22px;
-
-    color: #1e0606;
-
     margin-top: 10px;
-    margin-bottom: 18px;
+
+    @include media_interval(0, $media_mobile) {
+      margin-top: 0;
+    }
   }
 }
 
@@ -162,8 +281,26 @@
   position: absolute;
   bottom: -116px;
 
+  @include media_interval($media_mobile, $media_tablet) {
+    bottom: -79px;
+  }
+
+  @include media_interval(0, $media_mobile) {
+    bottom: -102px;
+  }
+
   &__content {
     border: none;
+
+    @include media_interval($media_mobile, $media_tablet) {
+      width: 284px;
+      height: 151px;
+    }
+  
+    @include media_interval(0, $media_mobile) {
+      width: 335px;
+      height: 196px;
+    }
   }
 }
 
@@ -184,24 +321,42 @@
   right: 0;
   z-index: 2;
 
-  background-color: rgba(125, 151, 218, 0.8);
+  background-color: rgba($c_blue, 0.8);
 
   &__window {
-    width: 680px;
-
+    max-width: 680px;
     padding: 21px 40px 42px;
-
     margin: auto;
-
-    background-color: #e5eaf8;
-
     position: relative;
+
+    background-color: $c_blue--light;
+
+    @include media_interval($media_mobile, $media_tablet) {
+      max-width: 648px;
+      padding: 21px 56px 42px;
+    }
+
+    @include media_interval(0, $media_mobile) {
+      max-width: 335px;
+      padding: 11px 25px 25px;
+    }
+  }
+}
+
+/* Form Button */
+.form-button {
+  margin-top: 5px;
+  min-width: 106px;
+  @include media_interval(0, $media_mobile) {
+  min-width: 55px;
+  margin-top: 1px;
   }
 }
 
 .button-close {
+  display: block;
   position: absolute;
-  top: 0px;
+  top: 0;
   right: -19px;
   cursor: pointer;
   background: none;
@@ -213,25 +368,10 @@
   border: none;
   transition: opacity $tr_duration $tr_easing;
 
-  // &::before {
-  //   content: "";
-  //   position: absolute;
-  //   top: 0;
-  //   height: 17.5px;
-  //   width: 2.4px;
-  //   background-color: #ffffff;
-  //   transform: rotate(45deg);
-  // }
-
-  // &::after {
-  //   content: "";
-  //   position: absolute;
-  //   top: 0;
-  //   height: 17.5px;
-  //   width: 2.4px;
-  //   background-color: #ffffff;
-  //   transform: rotate(-45deg);
-  // }
+  @include media_interval(0, $media_tablet) {
+    top: -27px;
+    right: 6px;
+  }
 
   &:hover {
     opacity: 0.5;

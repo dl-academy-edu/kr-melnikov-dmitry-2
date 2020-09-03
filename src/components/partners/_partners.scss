@@ -3,7 +3,11 @@
 @import "../mixins";
 
 .partners {
-  margin-bottom: 113px;
+  margin-bottom: 50px;
+
+  @include media_interval(0, $media_mobile) {
+    padding: 0 20px 0 10px;
+  }
 
   &__list {
     display: flex;
@@ -12,6 +16,12 @@
     list-style-type: none;
     padding: 0;
     align-items: center;
+    
+    &__item {
+      @include media_interval(0, $media_mobile) {
+        margin: 0 auto 26px;
+      }
+    }
   }
 
   &__link {
@@ -31,3 +41,51 @@
     }
   }
 }
+
+.mail {
+  @include media_interval($media_mobile, $media_tablet) {
+    width: 106px;
+    height: 33px;
+  }
+
+  @include media_interval(0, $media_mobile) {
+    width: 131px;
+    height: 42px;
+  }
+}
+
+.apple {
+  @include media_interval($media_mobile, $media_tablet) {
+    width: 98px;
+    height: 33.5px;
+  }
+
+  @include media_interval(0, $media_mobile) {
+    width: 109px;
+    height: 38px;
+  }
+}
+
+.eltex {
+  @include media_interval($media_mobile, $media_tablet) {
+    width: 118.5px;
+    height: 25px;
+  }
+
+  @include media_interval(0, $media_mobile) {
+    width: 149px;
+    height: 32px;
+  }
+}
+
+.owox {
+  @include media_interval($media_mobile, $media_tablet) {
+    width:115.8px;
+    height: 22px;
+  }
+
+  @include media_interval(0, $media_mobile) {
+    width: 143px;
+    height: 26px;
+  }
+}    

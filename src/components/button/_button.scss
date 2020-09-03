@@ -17,6 +17,12 @@
   cursor: pointer;
   transition: 0.3s;
 
+  @include media_interval(0, $media_mobile) {
+    font-size: 14px;
+    line-height: 19px;
+    padding: 8px 20px;
+  }
+
   color: $c_white;
   background-color: $c_black;
 

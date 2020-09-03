@@ -26,13 +26,3 @@ window.addEventListener("keydown", function(e) {
     }
 });
 
-// var buttonOpenMenu = document.getElementById("js-button-open-menu"),
-//     buttonCloseMenu = document.getElementById("js-button-close-menu");
-
-// buttonOpenMenu.addEventListener("click", function () {
-//     html.classList.add("open-mobile-menu");
-// });
-
-// buttonCloseMenu.addEventListener("click", function () {
-//     html.classList.remove("open-mobile-menu");
-// });

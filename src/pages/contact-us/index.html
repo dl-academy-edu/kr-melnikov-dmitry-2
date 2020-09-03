@@ -43,9 +43,9 @@
       </section>
       <section class="contact-us container">
         <h2 class="contact-us__title hidden">Contact Us FORM</h2>
-        <form class="contact-us__form" action="/pages/contact-us/index.html">
-        @@include('contact-us-form/index.html')
-      </form>
+      @@include('contact-us-form/index.html', {
+        "class":"contact-us__form"
+      })
         <div class="contact-us__description">
           <p class="contact-us__description__title">An expert is waiting to help you!</p>
           <p class="contact-us__description__text">

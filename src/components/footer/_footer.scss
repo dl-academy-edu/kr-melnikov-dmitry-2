@@ -4,17 +4,35 @@
 
 .footer {
   background-color: $c_gray--footer-dark;
+  padding: 100px 0;
+
+  @include media_interval(0, $media_tablet) {
+    padding: 80px 0 50px;
+  }
+
+  @include media_interval(0, $media_mobile) {
+    padding: 70px 0;
+  }
+
 
   &__content {
     max-width: 1400px;
     margin: 0 auto;
-    padding: 100px 110px;
+    padding: 0 110px;
     display: flex;
-    flex-wrap: wrap;
     position: relative;
     align-items: flex-start;
     width: 100%;
-    min-height: 555px;
+
+    @include media_interval($media_mobile, $media_tablet) {
+      padding: 0 60px;
+    }
+
+    @include media_interval(0, $media_mobile) {
+      padding: 0 21px;
+      flex-wrap: wrap;
+    }
+
   }
   &__title {
     font-family: "Open Sans";
@@ -30,6 +48,11 @@
 
     padding-bottom: 23px;
     border-bottom: 1px solid $c_gray--footer;
+
+    @include media_interval(0, $media_mobile) {
+      padding-bottom: 20px;
+      margin-bottom: 17px;
+    }
   }
 
   &__link {
@@ -45,6 +68,11 @@
     margin-top: 0;
     transition: 0.3s;
     outline: none;
+
+    @include media_interval(0, $media_mobile) {
+      font-size: 14px;
+      line-height: 19px;
+    }
 
     &:hover {
       opacity: 0.5;
@@ -87,7 +115,9 @@
   }
 
   &__nav {
-    width: 380px;
+    width: 100%;
+    min-width: 202px;
+    max-width: 380px;
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
@@ -95,36 +125,105 @@
     align-items: start;
     margin-right: 20px;
 
+    @include media_interval(0, $media_mobile) {
+      min-width: 100%;
+      max-width: 100%;
+      align-items: stretch;
+    }
+
     &-list {
       padding: 0;
       margin: 3px 0 0 1px;
       list-style-type: none;
+      
+      @include media_interval(0, $media_mobile) {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        max-height: 130px;
+        margin-bottom: 30px;
+        width: 100%;
+
+        &>:nth-child(1n+4) {
+          width: 160px;
+          align-self: flex-end;
+        }
+      }
+
+      
     }
   }
 
   &__customer {
-    width: 380px;
+    width: 100%;
+    min-width: 202px;
+    max-width: 380px;
     display: flex;
-    flex-wrap: wrap;
     flex-direction: column;
     justify-content: center;
     align-items: start;
     margin-right: 20px;
 
+    @include media_interval(0, $media_mobile) {
+      min-width: 100%;
+      max-width: 100%;
+      align-items: stretch;    
+    }
+
+    @include media_interval(0, $media_mobile) {
+      min-width: 100%;
+      max-width: 100%;
+    }
+
     &-list {
       padding: 0;
       margin: 3px 0 0 1px;
       list-style-type: none;
+
+      @include media_interval(0, $media_mobile) {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        max-height: 110px;
+        margin-bottom: 45px;
+        width: 100%;
+        
+        &>:nth-child(1n+4) {
+          width: 160px;
+          align-self: flex-end; 
+        }
+      }
     }
   }
 
   &__contact {
-    width: 380px;
+    width: 100%;
+    min-width: 202px;
+    max-width: 380px;
     display: flex;
-    flex-wrap: wrap;
     flex-direction: column;
     justify-content: center;
     align-items: start;
+
+    &-item {
+      height: 30px;
+      width: 30px;
+      margin-right: 10px;
+
+      @include media_interval(0, $media_mobile) {
+        margin-right: 15px;
+      }
+    }
+
+      @include media_interval(0, $media_mobile) {
+      min-width: 100%;
+      max-width: 100%;
+
+      &>.footer__title{
+        margin-bottom: 25px;
+        padding-bottom: 23px;
+      }
+    }
 
     &-list {
       padding: 0;
@@ -138,7 +237,7 @@
       display: block;
       height: 30px;
       width: 30px;
-      margin-right: 10px;
+      
       transition: opacity $tr_duration $tr_easing;
       outline: none;
 
@@ -158,15 +257,34 @@
     &__form {
       display: flex;
       margin-bottom: 25px;
+      width: 100%;
+
+      @include media_interval(0, $media_mobile) {
+        margin-bottom: 22px;
+      }
 
       &-email {
-        width: 299px;
+        font-family: Open Sans;
+        font-weight: normal;
+        font-style: normal;
+        line-height: 22px;
+        font-size: 16px;
+        
+        width: 100%;
+        max-width: 299px;
         padding: 9px 15px;
         margin-right: 0;
         outline: none;
         border: none;
-
+        
+        color: $c_white--footer;
         background-color: $c_gray--footer;
+
+        @include media_interval(0, $media_mobile) {
+          font-size: 14px;
+          line-height: 19px;
+          padding: 9.5px 15px;
+        }
       }
     }
   }
@@ -177,27 +295,76 @@
   }
 
   &__additional {
+    max-width: 1400px;
+    margin: 0 auto; 
+    padding: 0 110px;
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    align-items: flex-start;
+    justify-content: space-between;
+    width: 100%;
+
+    @include media_interval($media_mobile, $media_tablet) {
+      padding: 0 60px;
+    }
+
+    @include media_interval(0, $media_mobile) {
+      padding: 0 21px;
+    }
+
+    
     &__list {
       display: flex;
-      flex-wrap: wrap;
-      padding-top: 26px;
-      margin-top: 10px;
-      padding-left: 0;
-      border-top: 1px solid $c_gray--footer;
-      width: 100%;
+      justify-content: space-between;
+      padding-top: 23px;
+      margin-top: 13px;
       list-style-type: none;
+      padding-left: 0;
+      width: 100%; 
+      
+      border-top: 1px solid $c_gray--footer;
 
+      @include media_interval($media_mobile, $media_tablet) {
+        margin-top: 25px;
+      }
+
+      @include media_interval(0, $media_laptop) {
+        flex-wrap: wrap;
+        padding-right: 14px;
+      }
+
+      @include media_interval(0, $media_mobile) {
+        margin-top: 58px;
+      }
+      
       &-item {
-        margin-left: 20px;
-        width: 380px;
+        display: block;
+        max-width: 380px;
+        width: 100%;
         margin-bottom: 0;
+
+        &:first-child {
+          @include media_interval(0, $media_laptop) {
+            max-width: 100%;
+          }
+        }
+
+        @include media_interval($media_mobile, $media_laptop) {
+          max-width: 300px;
+        }
+
+        @include media_interval(0, $media_mobile) {
+          &>.footer__link {
+            font-size: 16px;
+            line-height: 22px;
+          }
+        }
       }
     }
-  }
+}
 
   &__rating {
-    width: 380px;
-    margin-bottom: 0;
 
     &__list {
       padding: 0;
@@ -207,6 +374,12 @@
 
       &-title {
         margin-right: 28px;
+        @include media_interval(0, $media_mobile) {
+          &>.footer__link {
+            font-size: 16px;
+            line-height: 22px;
+          }
+        }
       }
 
       &-item {

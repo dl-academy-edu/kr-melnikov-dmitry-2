@@ -96,85 +96,86 @@
         })
       </ul>
     </section>
-    <section class="footer__additional">
-      <h2 class="footer__additional-title hidden">additional links</h2>
-      <ul class="footer__additional__list">
-        <li class="footer__list-item">
-          <div class="footer__rating">
-        <ol class="footer__rating__list">
-          <li class="footer__rating__list-title">
-            <a class="footer__link" href="#">Company Rating</a>
-          </li>
-          <li class="footer__rating__list-item" >
-            <button class="button button_transparent footer__rating__button">
-              <img
-                src="/static/images/star.png"
-                alt="One star"
-                width="14"
-                height="13"
-                aria-label="One star"
-              />
-            </button>
-          </li>
-          <li class="footer__rating__list-item" >
-            <button class="button button_transparent footer__rating__button">
-              <img
-                src="/static/images/star.png"
-                alt="Two star"
-                width="14"
-                height="13"
-                aria-label="Two star"
-              />
-            </button>
-          </li>
-          <li class="footer__rating__list-item">
-            <button class="button button_transparent footer__rating__button">
-              <img
-                src="/static/images/star.png"
-                alt="Three star"
-                width="14"
-                height="13"
-                aria-label="Three star"
-              />
-            </button>
-          </li>
-          <li class="footer__rating__list-item">
-            <button class="button button_transparent footer__rating__button">
-              <img
-                src="/static/images/star.png"
-                alt="Four star"
-                width="14"
-                height="13"
-                aria-label="Four star"
-              />
-            </button>
-          </li>
-          <li class="footer__rating__list-item">
-            <button class="button button_transparent footer__rating__button">
-              <img
-                src="/static/images/star.png"
-                alt="Five star"
-                width="14"
-                height="13"
-                aria-label="Five star"
-              />
-            </button>
-          </li>
-        </ol>
-          </div>
-        </li>
-        @@include('footer/footer__link.html', {
-          "class":"footer__additional__list-item",
-          "link":"#",
-          "text":"Copyright © 2018 Dlk • Design Life Kids"
-        })
-        @@include('footer/footer__link.html', {
-          "class":"footer__link_gray footer__additional__list-item",
-          "link":"#",
-          "text":"Web Design — Direct Line Development"
-        })
-      </ul>
-    </section>
   </div>
+  <section class="footer__additional">
+    <h2 class="footer__additional-title hidden">additional links</h2>
+    <ul class="footer__additional__list ">
+      <li class="footer__additional__list-item">
+        <div class="footer__rating">
+      <ol class="footer__rating__list">
+        <li class="footer__rating__list-title">
+          <a class="footer__link" href="#">Company Rating</a>
+        </li>
+        <li class="footer__rating__list-item" >
+          <button class="button button_transparent footer__rating__button">
+            <img
+              src="/static/images/star.png"
+              alt="One star"
+              width="14"
+              height="13"
+              aria-label="One star"
+            />
+          </button>
+        </li>
+        <li class="footer__rating__list-item" >
+          <button class="button button_transparent footer__rating__button">
+            <img
+              src="/static/images/star.png"
+              alt="Two star"
+              width="14"
+              height="13"
+              aria-label="Two star"
+            />
+          </button>
+        </li>
+        <li class="footer__rating__list-item">
+          <button class="button button_transparent footer__rating__button">
+            <img
+              src="/static/images/star.png"
+              alt="Three star"
+              width="14"
+              height="13"
+              aria-label="Three star"
+            />
+          </button>
+        </li>
+        <li class="footer__rating__list-item">
+          <button class="button button_transparent footer__rating__button">
+            <img
+              src="/static/images/star.png"
+              alt="Four star"
+              width="14"
+              height="13"
+              aria-label="Four star"
+            />
+          </button>
+        </li>
+        <li class="footer__rating__list-item">
+          <button class="button button_transparent footer__rating__button">
+            <img
+              src="/static/images/star.png"
+              alt="Five star"
+              width="14"
+              height="13"
+              aria-label="Five star"
+            />
+          </button>
+        </li>
+      </ol>
+        </div>
+      </li>
+      @@include('footer/footer__link.html', {
+        "list-class":"footer__additional__list-item",
+        "link":"#",
+        "text":"Copyright © 2018 Dlk • Design Life Kids"
+      })
+      @@include('footer/footer__link.html', {
+        "class":"footer__link_gray",
+        "list-class":"footer__additional__list-item",
+        "link":"#",
+        "text":"Web Design — Direct Line Development"
+      })
+    </ul>
+  </section>
 </footer>
 

@@ -2,13 +2,19 @@
     <h2 class="useful__title hidden">
       USEFUL CONTENT BLOCK
     </h2>
-    <img
-      class="useful__img"
-      src="/static/images/delivery.jpg"
+    <picture class="useful__img">
+      <source srcset="/static/images/delivery.jpg, /static/images/delivery_2x.jpg 2x"
+              media="(min-width: 1024px)">
+      <source srcset="/static/images/delivery-tablet.jpg"
+              media="(min-width: 768px) and (max-width: 1023px)">
+      <source srcset="/static/images/delivery-mobile.jpg"
+              media="(max-width: 767px)">
+      <img src="/static/images/delivery.jpg"
       alt="useful"
       width="480"
       height="559"
-    />
+      class="useful__img">
+    </picture>
     <div class="useful__content">
       <h3 class="useful__content__title">
         Delivery

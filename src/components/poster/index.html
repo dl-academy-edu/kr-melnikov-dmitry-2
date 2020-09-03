@@ -23,14 +23,20 @@
             @@include('poster/poster-switch-button.html', {"label": "Fourth"})
           </ul>
         </div>
-        <img
-          class="poster__img-transparent"
-          src="/static/images/poster-1.png"
+        <picture class="poster__img-transparent">
+          <source srcset="/static/images/poster-desktop.png, /static/images/poster-desktop_2x.png 2x"
+                  media="(min-width: 1024px)">
+          <source srcset="/static/images/poster-tablet.png"
+                  media="(min-width: 580px) and (max-width: 1023px)">
+          <source srcset="/static/images/poster-mobile.png"
+                  media="(max-width: 579px)">
+          <img src="/static/images/poster-desktop.png"
           alt="THE OOH NOO COLLECTION"
           width="635"
           height="461"
-        />
-      </div>
+          class="poster__img-transparent">
+        </picture>
+        </div>
     </div>
     <div class="container">
       <div class="poster__bottom">
