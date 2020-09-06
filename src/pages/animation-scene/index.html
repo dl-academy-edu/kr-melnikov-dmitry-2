@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@1,400;1,700&family=Montserrat:wght@300;700&family=Open+Sans:wght@400;700&family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://necolas.github.io/normalize.css/8.0.1/normalize.css"
+    />
+    <link rel="stylesheet" href="/common.css" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>animation-scene</title>
+  </head>
+  <body>
+    @@include('header/index.html')
+    <main>
+      <section class="path container">
+        <h1 class="path__title">
+          animation scene
+        </h1>
+        <div class="breadcrumbs">
+          <ul class="breadcrumbs__list">
+            @@include('breadcrumbs/index.html', { 
+            "type": "link",
+            "link": "/",
+            "label": "Home" 
+            }) 
+            @@include('breadcrumbs/index.html', { 
+            "type": "svg" 
+            })
+            @@include('breadcrumbs/index.html', { 
+            "type": "link",
+            "class": "breadcrumbs__link_active", 
+            "link": "/pages/animation-scene", 
+            "label": "animation" 
+            })
+          </ul>
+        </div>
+      </section>
+    </main>
+    @@include('footer/index.html')
+  </body>
+</html>

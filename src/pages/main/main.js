@@ -1,26 +1,28 @@
 var popup = document.querySelector(".modal_js"),
     buttonOpen = document.querySelector(".button-open_js"),
     buttonClose = document.querySelector(".button-close_js"),
-    input = document.querySelector(".input_js");
+    input = document.querySelector(".input_js"),
+    html = document.querySelector("html");
 
 buttonOpen.addEventListener("click", function() {
-    popup.classList.add("modal-bg_open");
+    html.classList.add("modal_open");
     input.focus();
 });
 
 buttonClose.addEventListener("click", function() {
-    popup.classList.remove("modal-bg_open");
+    html.classList.remove("modal_open");
     buttonOpen.focus();
 });
 
 buttonClose.addEventListener("keydown", function(t) {
-    if(t.code === "Tab" && buttonClose.focus && popup.classList.contains("modal-bg_open")) {
+    if(t.code === "Tab" && buttonClose.focus && html.classList.contains("modal_open")) {
         input.focus();
         }
 });
 
 window.addEventListener("keydown", function(e) {
-    if(e.code === "Escape" && popup.classList.contains("modal-bg_open")) {
-        popup.classList.remove("modal-bg_open");
+    if(e.code === "Escape" && html.classList.contains("modal_open")) {
+        html.classList.remove("modal_open");
     }
 });
+

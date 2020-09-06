@@ -1,4 +1,6 @@
-// BUTTONS
+@import "../colors";
+@import "../vars";
+@import "../mixins";
 
 .button {
   font-family: "Open Sans";
@@ -15,46 +17,50 @@
   cursor: pointer;
   transition: 0.3s;
 
-  color: #ffffff;
-  background-color: #000000;
-}
+  @include media_interval(0, $media_mobile) {
+    font-size: 14px;
+    line-height: 19px;
+    padding: 8px 20px;
+  }
 
-.button:hover {
-  background-color: #c29974;
-}
+  color: $c_white;
+  background-color: $c_black;
 
-.button:focus {
-  background-color: #c29974;
-}
+  &:hover {
+    background-color: $c_brown;
+  }
 
-.button:active {
-  background-color: #cfaf91;
-}
+  &:focus {
+    background-color: $c_brown;
+  }
 
-.button:disabled {
-  color: #e1e1e1;
-  background-color: #c1c1c1;
-  cursor: default;
-}
+  &:active {
+    background-color: $c_brown--light;
+  }
 
-.button-transparent {
-  display: block;
-  margin-right: 23px;
-  border: none;
-  cursor: pointer;
-  outline: none;
-  background: none;
-  transition: 0.3s;
-}
+  &:disabled {
+    color: $c_gray--light;
+    background-color: $c_gray;
+    cursor: default;
+  }
 
-.button-transparent:hover {
-  opacity: 0.5;
-}
+  &_transparent {
+    background: none;
+    padding: 0;
 
-.button-transparent:focus {
-  opacity: 0.5;
-}
+    &:hover{
+      opacity: 0.5;
+      background: none;
+    }
 
-.button-transparent:active {
-  opacity: 0.2;
+    &:focus {
+      opacity: 0.5;
+      background: none;
+    }
+
+    &:active {
+      opacity: 0.2;
+      background: none;
+    }
+  }
 }

@@ -1,40 +1,46 @@
 <section class="poster">
     <div class="container">
-      <div class="poster-content">
-        <div class="poster-useful">
-          <h1 class="poster-title">
+      <div class="poster__content">
+        <div class="poster__useful">
+          <h1 class="poster__useful__title">
             THE OOH NOO COLLECTION
           </h1>
-          <p class="poster-text">Designed in Slovenia</p>
+          <p class="poster__useful__text">Designed in Slovenia</p>
           @@include('./button/index.html', {
             "type":"button",
-            "class":"poster-button button-open_js",
+            "class":"poster__useful__button button-open_js",
             "text":"explore now"
           })
         </div>
-        <div class="poster-switch">
-          <h2 class="poster-switch-title">
+        <div class="poster__switch">
+          <h2 class="poster__switch__title">
             01
           </h2>
-          <ul class="poster-list">
-            @@include('poster/poster-switch-button.html', {"class": "poster-switch-button_active", "label": "First"})
+          <ul class="poster__switch__list">
+            @@include('poster/poster-switch-button.html', {"class": "poster__switch__button_active", "label": "First"})
             @@include('poster/poster-switch-button.html', {"label": "Second"})
             @@include('poster/poster-switch-button.html', {"label": "Third"})
             @@include('poster/poster-switch-button.html', {"label": "Fourth"})
           </ul>
         </div>
-        <img
-          class="poster-transparent"
-          src="/static/images/poster-1.png"
+        <picture class="poster__img-transparent">
+          <source srcset="/static/images/poster-desktop.png, /static/images/poster-desktop_2x.png 2x"
+                  media="(min-width: 1024px)">
+          <source srcset="/static/images/poster-tablet.png"
+                  media="(min-width: 580px) and (max-width: 1023px)">
+          <source srcset="/static/images/poster-mobile.png"
+                  media="(max-width: 579px)">
+          <img src="/static/images/poster-desktop.png"
           alt="THE OOH NOO COLLECTION"
           width="635"
           height="461"
-        />
-      </div>
+          class="poster__img-transparent">
+        </picture>
+        </div>
     </div>
     <div class="container">
-      <div class="poster-bottom">
-        <p class="poster-bottom-text">
+      <div class="poster__bottom">
+        <p class="poster__bottom__text">
           FREE (CONTINENTAL) USA SHIPPINGON ALL ORDERS OF $100 USD OR MORE!
         </p>
       </div>

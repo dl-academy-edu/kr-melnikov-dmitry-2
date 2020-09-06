@@ -1,75 +1,77 @@
+@import "colors";
+
 .blog {
   margin-top: 50px;
   margin-bottom: 11px;
   padding: 0;
-}
 
-.blog-list {
-  padding-left: 0;
+  &__list {
+    padding-left: 0;
 
-  list-style-type: none;
+    list-style-type: none;
 
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
 
-  margin: 0 -10px;
-  padding: 0;
-}
+    margin: 0 -10px;
+    padding: 0;
+  }
 
-.blog-card {
-  width: 400px;
-  margin: 0 0 20px 0;
-  padding: 0 10px;
-}
+  &__card {
+    width: 400px;
+    margin: 0 0 20px 0;
+    padding: 0 10px;
 
-.blog-card-date {
-  font-family: "Roboto";
-  font-style: normal;
-  font-weight: normal;
-  font-size: 16px;
-  line-height: 19px;
+    &__date {
+      font-family: "Roboto";
+      font-style: normal;
+      font-weight: normal;
+      font-size: 16px;
+      line-height: 19px;
 
-  color: #818181;
+      color: $c_gray--text;
 
-  margin-top: 15px;
-  margin-bottom: 10px;
-}
+      margin-top: 15px;
+      margin-bottom: 10px;
+    }
 
-.blog-card-title {
-  font-family: "Montserrat";
-  font-style: normal;
-  font-weight: bold;
-  font-size: 24px;
-  line-height: 31px;
+    &__title {
+      font-family: "Montserrat";
+      font-style: normal;
+      font-weight: bold;
+      font-size: 24px;
+      line-height: 31px;
 
-  color: #1e0606;
+      color: $c_black--light;
 
-  margin: 10px 0;
-  transition: 0.3s;
-  outline: none;
-}
+      margin: 10px 0;
+      transition: 0.3s;
+      outline: none;
 
-.blog-card-title:hover {
-  text-decoration-line: underline;
-}
+      &:hover {
+        text-decoration-line: underline;
+      }
 
-.blog-card-title:focus {
-  text-decoration-line: underline;
-}
+      &:focus {
+        text-decoration-line: underline;
+      }
 
-.blog-card-title:active {
-  opacity: 0.7;
-}
+      &:active {
+        opacity: 0.7;
+      }
+    }
 
-.blog-card-text {
-  font-family: "Open Sans";
-  font-style: normal;
-  font-weight: normal;
-  font-size: 18px;
-  line-height: 25px;
-
-  color: #1e0606;
-
-  margin: 15px 0;
+    &__text {
+      font-family: "Open Sans";
+      font-style: normal;
+      font-weight: normal;
+      font-size: 18px;
+      line-height: 25px;
+    
+      color: $c_black--light;
+    
+      margin: 15px 0;
+    }
+  }
 }

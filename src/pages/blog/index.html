@@ -19,30 +19,29 @@
     @@include('header/index.html')
     <main>
       <section class="path container">
-        <h1 class="page-title">
+        <h1 class="path__title">
           blog
         </h1>
         <div class="breadcrumbs">
-          <ul class="breadcrumbs-list">
-            @@include('breadcrumbs/index.html', {
-              "type": "link", 
-              "link": "/index.html",
-              "label": "Home" 
+          <ul class="breadcrumbs__list">
+            @@include('breadcrumbs/index.html', { 
+            "type": "link",
+            "link": "/",
+            "label": "Home" 
+            }) 
+            @@include('breadcrumbs/index.html', { 
+            "type": "svg" 
             })
-            @@include('breadcrumbs/index.html', {
-              "type": "svg" 
+            @@include('breadcrumbs/index.html', { 
+            "type": "link",
+            "class": "breadcrumbs__link_active", 
+            "link": "/pages/blog", 
+            "label": "blog" 
             })
-            @@include('breadcrumbs/index.html', {
-              "type": "link", 
-              "class": "breadcrumbs-link_active",
-              "link": "/pages/blog",
-              "label": "blog"
-            })  
           </ul>
         </div>
       </section>
-      @@include('blog-content/index.html')
-      @@include('pagenumber/index.html')
+      @@include('blog-content/index.html') @@include('pagenumber/index.html')
     </main>
     @@include('footer/index.html')
   </body>

@@ -1,88 +1,88 @@
+@import "../colors";
+@import "../vars";
+@import "../mixins";
+
 .product-card {
   padding: 0px;
   display: block;
   margin: 5px 10px 40px;
-  transition: 0.3s;
-}
 
-.product-card-link {
-  position: relative;
-  min-height: 385px;
-  width: 380px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  outline: none;
-}
+  &__link {
+    position: relative;
+    min-height: 385px;
+    width: 380px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    outline: none;
 
-.product-img {
-  position: absolute;
-  left: auto;
-  top: auto;
-}
+    &__img {
+      position: absolute;
+      left: auto;
+      top: auto;
+    }
 
-.product-card-modal {
-  z-index: -1;
-  width: 207px;
-  min-height: 207px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transition: 0.5s;
+    &:hover > .product-card__modal {
+      opacity: 0.9;
+    }
+    
+    &:focus > .product-card__modal {
+      opacity: 0.9;
+    }
+    
+    &:active > .product-card__modal {
+      opacity: 0.67;
+    }
+  }
 
-  background-color: #e5eaf8;
-}
+  &__modal {
+    opacity: 0;
+    width: 207px;
+    min-height: 207px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: opacity $tr_duration $tr_easing;
+  
+    background-color: $c_blue--light;
 
-.product-card-modal-text {
-  font-family: "Montserrat";
-  font-style: normal;
-  font-weight: bold;
-  font-size: 26px;
-  line-height: 29px;
-  text-transform: uppercase;
+    &__text {
+      font-family: "Montserrat";
+      font-style: normal;
+      font-weight: bold;
+      font-size: 26px;
+      line-height: 29px;
+      text-transform: uppercase;
+    
+      color: $c_black--light;
+      text-shadow: 0px 0px 40px rgba($c_red, 0.25);
+    }
+  }
 
-  color: #1e0606;
-  text-shadow: 0px 0px 40px rgba(147, 3, 3, 0.25);
-}
+  &__title {
+    font-family: "Open Sans";
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 19px;
+  
+    text-align: center;
+    margin: 30px auto 15px;
+  
+    color: $c_black--light;
+  }
 
-.product-card-name {
-  font-family: "Open Sans";
-  font-style: normal;
-  font-weight: normal;
-  font-size: 14px;
-  line-height: 19px;
-
-  text-align: center;
-  margin: 30px auto 15px;
-
-  color: #1e0606;
-}
-
-.product-card-price {
-  font-family: "Open Sans";
-  font-style: normal;
-  font-weight: bold;
-  font-size: 16px;
-  line-height: 22px;
-
-  text-align: center;
-  display: block;
-  padding: 1px 0;
-
-  color: #1e0606;
-}
-
-.product-card-link:hover > .product-card-modal {
-  z-index: 0;
-  opacity: 0.9;
-}
-
-.product-card-link:focus > .product-card-modal {
-  z-index: 0;
-  opacity: 0.9;
-}
-
-.product-card-link:active > .product-card-modal {
-  z-index: 0;
-  opacity: 0.67;
+  &__price {
+    font-family: "Open Sans";
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 22px;
+  
+    text-align: center;
+    display: block;
+    padding: 1px 0;
+  
+    color: $c_black--light;
+  }
 }

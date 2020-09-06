@@ -21,8 +21,8 @@
     <main>
       @@include('poster/index.html')
       <section class="category container">
-        <h2 class="category-title">CATEGORY PRODUCTS</h2>
-        <ul class="category-list">
+        <h2 class="category__title">CATEGORY PRODUCTS</h2>
+        <ul class="category__list">
           @@include('category-card/index.html', { "link": "#1", "src":
           "/static/images/apparel-kids.png", "name": "apparel kids" })
           @@include('category-card/index.html', { "link": "#2", "src":
@@ -32,9 +32,9 @@
           "toys" }) @@include('category-card/index.html', { "link": "#4", "src":
           "/static/images/accessories.png", "name": "accessories" })          
         </ul>
-        <div class="category-bottom">          
+        <div class="category__bottom">          
           <button
-            class="category-button button-transparent"
+            class="button button_transparent category__bottom__button"
             aria-label="Previous categories"
           >
             <svg
@@ -48,7 +48,7 @@
             </svg>
           </button>
           <button
-            class="category-button button-transparent"
+            class="button button_transparent category__bottom__button"
             aria-label="Next categories"
           >
             <svg
@@ -62,7 +62,7 @@
               <path d="M16 2L3 15L16 28" stroke="#1E0606" stroke-width="4" />
             </svg>
           </button>
-          <p class="category-text">
+          <p class="category__bottom__description">
             Modern finds for the modern home. Curated goods by unique designers
             around the world from fashion to furniture for kids and adults.
           </p>
@@ -71,10 +71,10 @@
       @@include('useful/index.html')
       @@include('partners/index.html')
       <div class="article-content container">
-        <article class="article article-content-point">
-          <h2 class="article-title">DESIGN LIFE KIDS</h2>
-          <h3 class="article-add-title">About Us</h3>
-          <p class="article-text">
+        <article class="article article-content__point">
+          <h2 class="article__title">DESIGN LIFE KIDS</h2>
+          <h3 class="article__second-title">About Us</h3>
+          <p class="article__description">
             Some days i feel like i've been working on dlk my entire life and
             there are other days that i am completely shocked that four years have
             flown by. It's simply magical.
@@ -82,20 +82,20 @@
           @@include('./button/index.html', {
             "type":"link",
             "link": "#",
-            "class":"article-button",
+            "class":"article__button",
             "text":"buy now"
           })
         </article>
-        <section class="contacts article-content-point">
-          <h2 class="contacts-title">CONTACTS</h2>
-          <p class="contacts-text">
+        <section class="contacts article-content__point">
+          <h2 class="contacts__title">CONTACTS</h2>
+          <p class="contacts__description">
             Some days i feel like i've been working on dlk my entire life and
             there are other days that i am completely shocked that four years have
             flown by. It's simply magical.
           </p>
           <div class="map">
             <iframe
-              class="map-content"
+              class="map__content"
               src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d6307.35918005307!2d-122.41793094908978!3d37.77411045351795!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8085809be90f0637%3A0xd558ef250f4addf9!2sBill%20Graham%20Civic%20Auditorium!5e0!3m2!1sen!2sru!4v1594990937935!5m2!1sen!2sru"
               width="483"
               height="196"
@@ -106,18 +106,14 @@
           </div>
         </section>
       </div>
-      <div class="modal-bg modal_js"> 
-        <form class="modal-window" action="/pages/contact-us/index.html">
-        @@include('contact-us-form/index.html')
-        <button
-          class="button-close button-close_js"
-          type="button"
-          aria-label="exit"
-        ></button>
-      </form>
+      <div class="modal modal_js"> 
+        @@include('contact-us-form/index.html', {
+          "class":"modal__window"
+        })
       </div>
     </main>
     @@include('footer/index.html')
     <script src="main.js"></script>
+    <script src="/static/images/mobile-menu.js"></script>
   </body>
 </html>

@@ -1,100 +1,203 @@
+@import "../colors";
+@import "../vars";
+@import "../mixins";
+
 .useful {
-    display: flex;
-    flex-wrap: wrap;
-    margin-bottom: 90px;
+  display: flex;
+  margin-top: 90px;
+  margin-bottom: 86px;
+
+  @include media_interval($media_mobile, $media_tablet) {
+    margin-top: 61px;
+    margin-bottom: 60px;
+  }
+
+  @include media_interval(0, $media_mobile) {
+    flex-direction: column;
+    margin-top: 82px;
+    margin-bottom: 80px;
+  }
+
+  &__img {
+
+    @include media_interval($media_tablet, $media_laptop) {
+      max-width: 480px;
+      max-height: 559px;
+    }
+
+    @include media_interval($media_mobile, $media_tablet) {
+      max-width: 258px;
+      max-height: 512px;
+    }
+
+    @include media_interval(0, $media_mobile) {
+      max-width: 335px;
+      max-height: 357px;
+      margin: 0 auto;
+    }
   }
   
-  .useful-content {
+  &__content {
     padding: 31px 0 0 60px;
+
+    @include media_interval($media_mobile, $media_tablet) {
+      padding: 30px 0 0 36px;
+    }
+
+    @include media_interval(0, $media_mobile) {
+      padding: 20px 0 0 0;
+    }
+
+    &__title {
+      font-family: "Montserrat";
+      font-style: normal;
+      font-weight: bold;
+      font-size: 38px;
+      line-height: 46px;
+      padding-left: 61px;
+      padding-top: 0;
+      margin-top: 0;
+      margin-bottom: 9px;
+      text-transform: uppercase;
+    
+      color: $c_black--light;
+
+      @include media_interval($media_mobile, $media_tablet) {
+        font-size: 36px;
+        line-height: 44px;
+        padding-left: 20px;
+        margin-bottom: 5px;
+      }
+
+      @include media_interval(0, $media_mobile) {
+        font-size: 24px;
+        line-height: 29px;
+        padding-left: 20px;
+      }
+    }
+
+    &__list {
+      list-style-type: none;
+      padding-left: 0;
+      margin-top: 5px;
+      margin-bottom: 20px;
+
+      @include media_interval($media_mobile, $media_tablet) {
+        margin-top: 0;
+        margin-bottom: 0;
+      }
+
+      @include media_interval(0, $media_mobile) {
+        font-size: 24px;
+        line-height: 29px;
+        margin-top: 22px;
+        margin-bottom: 10px;
+      }
+    }
+
+    &__button {
+      display: block;
+      border: none;
+      cursor: pointer;
+      outline: none;
+    
+      font-family: "Crimson Text";
+      font-style: italic;
+      font-weight: normal;
+      font-size: 26px;
+      line-height: 32px;
+      width: 326px;
+      margin: 0;
+      text-align: start;
+      text-transform: capitalize;
+      padding: 11px 0 11px 60px;
+    
+      color: $c_black--light;
+    
+      background: none;
+      transition: opacity $tr_duration $tr_easing, background-color $tr_duration $tr_easing;
+
+      @include media_interval(0, $media_tablet) {
+        font-size: 24px;
+        line-height: 30px;
+        width: 267px;
+        padding: 8px 0 7px 20px;
+      }
+
+      &:hover {
+        opacity: 0.7;
+      
+        background-color: rgba($c_blue--main, 0.2);
+      }
+      
+      &:focus {
+        opacity: 0.7;
+      
+        background-color: rgba($c_blue--main, 0.2);
+      }
+      
+      &:active {
+        opacity: 0.5;
+      
+        background-color: rgba($c_blue--main, 0.2);
+      }
+      
+      &_active {
+        font-weight: bold;
+        pointer-events: none;
+        cursor: default;
+      
+        background-color: rgba($c_blue--main, 0.2);
+      }
+    }
+
+    &__text {
+      margin-top: 14px;
+      margin-bottom: 15px;
+      margin-left: 60px;
+      max-width: 480px;
+      font-family: "Open Sans";
+      font-style: normal;
+      font-weight: normal;
+      font-size: 16px;
+      line-height: 22px;
+    
+      color: $c_black--light;
+
+      @include media_interval($media_mobile, $media_tablet) {
+        margin-top: 13px;
+        margin-bottom: 16px;
+        margin-left: 20px;
+        max-width: 300px;
+        font-size: 14px;
+        line-height: 19px;
+      }
+
+      @include media_interval(0, $media_mobile) {
+        margin-top: 11px;
+        margin-bottom: 13px;
+        margin-left: 20px;
+        max-width: 335px;
+        font-size: 14px;
+        line-height: 19px;
+      }
+    }
   }
-  
-  .useful-title {
-    font-family: "Montserrat";
-    font-style: normal;
-    font-weight: bold;
-    font-size: 38px;
-    line-height: 46px;
-    padding-left: 61px;
-    padding-top: 0;
-    margin-top: 0;
-    margin-bottom: 9px;
-    text-transform: uppercase;
-  
-    color: #1e0606;
-  }
-  
-  .useful-list {
-    list-style-type: none;
-    padding-left: 0;
-    margin-top: 5px;
-    margin-bottom: 20px;
-  }
-  
-  .useful-button {
-    display: block;
-    border: none;
-    cursor: pointer;
-    outline: none;
-  
-    font-family: "Crimson Text";
-    font-style: italic;
-    font-weight: normal;
-    font-size: 26px;
-    line-height: 32px;
-    width: 326px;
-    margin: 0;
-    text-align: start;
-    text-transform: capitalize;
-    padding: 11px 0 11px 60px;
-  
-    color: #1e0606;
-  
-    background: none;
-    transition: 0.5s;
-  }
-  
-  .useful-button:hover {
-    opacity: 0.7;
-  
-    background-color: rgba(112, 187, 220, 0.2);
-  }
-  
-  .useful-button:focus {
-    opacity: 0.7;
-  
-    background-color: rgba(112, 187, 220, 0.2);
-  }
-  
-  .useful-button:active {
-    opacity: 0.5;
-  
-    background-color: rgba(112, 187, 220, 0.2);
-  }
-  
-  .useful-button_active {
-    font-weight: bold;
-    pointer-events: none;
-    cursor: default;
-  
-    background-color: rgba(112, 187, 220, 0.2);
-  }
-  
-  .useful-text {
-    margin-top: 14px;
-    margin-bottom: 15px;
-    margin-left: 60px;
-    max-width: 480px;
-    font-family: "Open Sans";
-    font-style: normal;
-    font-weight: normal;
-    font-size: 16px;
-    line-height: 22px;
-  
-    color: #1e0606;
-  }
-  
-  .more-useful-button {
+
+  &__button {
     margin-left: 60px;
     margin-top: 25px;
     width: 149px;
+
+    @include media_interval($media_mobile, $media_tablet) {
+      margin-left: 20px;
+      margin-top: 21px;
+    }
+
+    @include media_interval(0, $media_mobile) {
+      margin-left: 20px;
+      margin-top: 22px;
+      width: 132px;
+    }  
   }
+}

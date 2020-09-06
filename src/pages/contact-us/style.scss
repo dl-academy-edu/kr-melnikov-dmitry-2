@@ -1,51 +1,104 @@
-.page-content {
+@import "../../components/colors";
+@import "../../components/vars";
+@import "../../components/mixins";
+
+.button-close {
+  display: none;
+}
+.contact-us {
   margin-top: 50px;
   margin-bottom: 60px;
   display: flex;
   justify-content: space-between;
-}
 
-/* Contact Us Form */
+  @include media_interval(0, $media_laptop) {
+    flex-direction: column-reverse;
+    margin-top: 44px;
+  }
 
-.contact-us-form {
-  padding: 20px 40px 42px;
+  @include media_interval(0, $media_mobile) {
+    margin-top: 26px;
+    margin-bottom: 50px;
+  }
 
-  background-color: #e5eaf8;
+  &__form {
+    padding: 20px 40px 42px;
+    background-color: #e5eaf8;
+    max-width: 680px;
+    width: 100%;
+  
+    margin: 0;
 
-  width: 680px;
+    @include media_interval($media_mobile, $media_laptop) {
+      margin-top: 44px;
+      padding: 20px 50px 40px 60px;
+    }
 
-  margin: 0;
-}
+    @include media_interval(0, $media_mobile) {
+      margin-top: 25px;
+      padding: 11px 25px 25px;
+    }
+  
+  }
 
+  &__description {
+    max-width: 380px;
+    width: 100%;
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: flex-end;
 
-/* Text Block */
+    @include media_interval(0, $media_laptop) {
+      align-items: center;
+      max-width: 540px;
+      margin-left: auto;
+      margin-right: auto;
+    }
 
-.text-block {
-  max-width: 380px;
-  margin-top: -2px;
-}
+    @include media_interval(0, $media_mobile) {
+      max-width: 100%;
+    }
 
-.text-block-point {
-  font-family: "Open Sans";
-  font-style: normal;
-  font-weight: normal;
-  font-size: 16px;
-  line-height: 22px;
-  margin-top: 0;
-  margin-bottom: 20px;
+    &__title {
+      font-family: "Montserrat";
+      font-style: normal;
+      font-weight: 600;
+      font-size: 26px;
+      line-height: 34px;
+    
+      text-transform: uppercase;
+    
+      color: #c29974;
 
-  color: #1e0606;
-}
+      @include media_interval(0, $media_laptop) {
+        text-align: center;
+      }
 
-.text-block-main {
-  font-family: "Montserrat";
-  font-style: normal;
-  font-weight: 600;
-  font-size: 26px;
-  line-height: 34px;
-  margin-top: 20px;
+      @include media_interval(0, $media_mobile) {
+        font-size: 24px;
+      }
+    }
 
-  text-transform: uppercase;
+    &__text {
+      font-family: "Open Sans";
+      font-style: normal;
+      font-weight: normal;
+      font-size: 16px;
+      line-height: 22px;
+      margin-top: 0;
+      margin-bottom: 20px;
+    
+      color: #1e0606;
 
-  color: #c29974;
+      @include media_interval(0, $media_laptop) {
+        text-align: center;
+      }
+
+      @include media_interval(0, $media_mobile) {
+        font-size: 14px;
+        line-height: 19px;
+        margin-bottom: 15px;
+      }
+    }
+  }
 }

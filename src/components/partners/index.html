@@ -1,21 +1,37 @@
 <section class="partners container">
-  <h2 class="hidden">Partners</h2>
-  <ul class="partners-list">
-    <li>
-      @@include('partners/partner.html', { "link": "#", "img":
-      "static/images/mail.png", "name": "Mail.ru", "width": "193", "height": "60"})
-    </li>
-    <li>
-      @@include('partners/partner.html', { "link": "#", "img":
-      "static/images/apple.png", "name": "Apple", "width": "179", "height": "61"})
-    </li>
-    <li>
-      @@include('partners/partner.html', { "link": "#", "img":
-      "static/images/eltex.png", "name": "ELTEX", "width": "216", "height": "46" })
-    </li>
-    <li>
-      @@include('partners/partner.html', { "link": "#", "img":
-      "static/images/owox.png", "name": "OWOX", "width": "211", "height": "40" })
-    </li>
+  <h2 class="partners__title hidden">Partners</h2>
+  <ul class="partners__list">
+      @@include('partners/partner.html',{ 
+        "link": "#", 
+        "img-class": "mail",
+        "src": "static/images/mail.png", 
+        "name": "Mail.ru", 
+        "width": "193", 
+        "height": "60"
+      })
+      @@include('partners/partner.html',{ 
+        "link": "#",
+        "img-class": "apple", 
+        "src": "static/images/apple.png", 
+        "name": "Apple", 
+        "width": "179", 
+        "height": "61"
+      })
+      @@include('partners/partner.html',{ 
+        "link": "#",
+        "img-class": "eltex", 
+        "src": "static/images/eltex.png", 
+        "name": "ELTEX", 
+        "width": "216", 
+        "height": "46" 
+      })
+      @@include('partners/partner.html',{ 
+        "link": "#", 
+        "img-class": "owox",
+        "src": "static/images/owox.png", 
+        "name": "OWOX", 
+        "width": "211", 
+        "height": "40" 
+      })
   </ul>
 </section>
