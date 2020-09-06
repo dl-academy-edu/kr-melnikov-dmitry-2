@@ -1,11 +1,16 @@
 <li class="blog__card">
-  <img
-    class="blog__card__img"
-    src="@@src"
-    alt="@@title"
-    width="380"
-    height="220"
-  />
+  <picture class="blog__card__img">
+    <source srcset="/static/images/blog-@@src.jpg, /static/images/blog-@@src_2x.jpg 2x" media="(min-width: 1200px)">
+    <source srcset="/static/images/blog-@@src-tablet.jpg" media="(min-width: 465px) and (max-width: 1199px)">
+    <source srcset="/static/images/blog-@@src-mobile.jpg" media="(max-width: 464px)">
+    <img
+      class="blog__card__img"
+      src="/static/images/blog-@@src.jpg"
+      alt="@@title"
+      width="380"
+      height="220"
+    />
+  </picture>
   <p class="blog__card__date">@@date</p>
   <a href="#" class="blog__card__title">
     @@title

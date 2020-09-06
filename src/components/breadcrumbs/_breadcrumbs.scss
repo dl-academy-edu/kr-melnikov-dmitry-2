@@ -4,9 +4,11 @@
 
 .path {
   margin-top: 56px;
+  margin-bottom: 10px;
 
-  @include media_interval(0, $media_mobile) {
-    margin-top: 20px;
+  @include media_interval(0, $media_mobile-medium) {
+    margin-top: 29px;
+    margin-left: 20px;
   }
 
   &__title {
@@ -23,7 +25,6 @@
     @include media_interval($media_mobile, $media_tablet) {
       font-size: 36px;
       line-height: 44px;
-      margin-left: 8px;
     }
 
     @include media_interval(0, $media_mobile) {
@@ -41,16 +42,14 @@
     display: flex;
     align-items: center;
     margin-top: 5px;
-    margin-bottom: 20px;
+    margin-bottom: 0;
 
     @include media_interval($media_mobile, $media_tablet) {
       padding-top: 4px;
-      padding-left: 8px;
     }
 
     @include media_interval(0, $media_mobile) {
       padding-top: 4px;
-      padding-left: 0;
     }
 
     &__item {
@@ -58,7 +57,7 @@
       margin: 0 10px;
 
       @include media_interval(0, $media_mobile) {
-        margin: 0 6px;
+        margin: 0 7px;
       }
 
       &:first-child {

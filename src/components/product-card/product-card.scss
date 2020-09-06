@@ -5,21 +5,70 @@
 .product-card {
   padding: 0px;
   display: block;
-  margin: 5px 10px 40px;
+  margin: 5px -10px 40px;
+  padding: 0 10px;
+  width: 33.33%;
+  max-width: 400px;
+
+  @include media_interval($media_tablet, $media_laptop) {
+    max-width: 360px;
+  }
+
+  @include media_interval($media_mobile, $media_tablet) {
+    max-width: 223px;
+    margin: 5px -6px 25px;
+  }
+
+  @include media_interval(0, $media_mobile) {
+    width: 50%;
+    max-width: 180px;
+    margin-bottom: 1px;
+  }
 
   &__link {
     position: relative;
-    min-height: 385px;
-    width: 380px;
+    height: 385px;
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     outline: none;
 
+    @include media_interval($media_tablet, $media_laptop) {
+      height: 300px;
+    }
+
+    @include media_interval($media_mobile, $media_tablet) {
+      height: 211px;
+    }
+  
+    @include media_interval(0, $media_mobile) {
+      height: 167px;
+    }
+  
+
     &__img {
       position: absolute;
       left: auto;
       top: auto;
+      width: 100%;
+      max-width: 380px;
+      height: 385px;
+
+      @include media_interval($media_tablet, $media_laptop) {
+        max-width: 340px;
+        height: 320px;
+      }
+
+      @include media_interval($media_mobile, $media_tablet) {
+        max-width: 223px;
+        height: 211px;
+      }
+    
+      @include media_interval(0, $media_mobile) {
+        max-width: 180px;
+        height: 167px;
+      }
     }
 
     &:hover > .product-card__modal {
@@ -46,6 +95,22 @@
   
     background-color: $c_blue--light;
 
+    @include media_interval($media_tablet, $media_laptop) {
+      width: 170px;
+      min-height: 170px;
+    }
+
+    @include media_interval($media_mobile, $media_tablet) {
+      width: 120px;
+      min-height: 120px;
+    }
+  
+    @include media_interval(0, $media_mobile) {
+      width: 100px;
+      min-height: 100px;
+    }
+  
+
     &__text {
       font-family: "Montserrat";
       font-style: normal;
@@ -56,6 +121,21 @@
     
       color: $c_black--light;
       text-shadow: 0px 0px 40px rgba($c_red, 0.25);
+
+      @include media_interval($media_tablet, $media_laptop) {
+        font-size: 20px;
+        line-height: 24px;
+      }
+
+      @include media_interval($media_mobile, $media_tablet) {
+        font-size: 16px;
+        line-height: 19px;
+      }
+    
+      @include media_interval(0, $media_mobile) {
+        font-size: 14px;
+        line-height: 16px;
+      }
     }
   }
 
@@ -70,6 +150,20 @@
     margin: 30px auto 15px;
   
     color: $c_black--light;
+
+    @include media_interval($media_mobile, $media_tablet) {
+      font-size: 12px;
+      line-height: 16px;
+
+      margin: 15px auto 4px;
+    }
+  
+    @include media_interval(0, $media_mobile) {
+      font-size: 12px;
+      line-height: 16px;
+
+      margin: 19px auto 15px;
+    }
   }
 
   &__price {
@@ -84,5 +178,15 @@
     padding: 1px 0;
   
     color: $c_black--light;
+
+    @include media_interval($media_mobile, $media_tablet) {
+      font-size: 14px;
+      line-height: 19px;
+    }
+  
+    @include media_interval(0, $media_mobile) {
+      font-size: 12px;
+      line-height: 16px;
+    }
   }
 }

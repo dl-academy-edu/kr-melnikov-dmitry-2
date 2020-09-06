@@ -20,6 +20,7 @@
     &__item {
       @include media_interval(0, $media_mobile) {
         margin: 0 auto 26px;
+        width: 150px;
       }
     }
   }

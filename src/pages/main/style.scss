@@ -17,7 +17,25 @@
   }
 
   @include media_interval(0, $media_mobile) {
-    margin-top: 69px;
+    margin-top: 69px;    
+  }
+
+  &-card {
+    position: relative;
+    min-width: 280px;
+    height: 270px;
+    margin: 10px;
+
+    @include media_interval($media_mobile, $media_tablet) {
+      min-width: 258px;
+      height: 249px;
+    }
+  
+    @include media_interval(0, $media_mobile) {
+      min-width: 247px;
+      height: 238px;
+      margin: 10px 8px;
+    }
   }
 
   &__title {
@@ -46,21 +64,18 @@
     }
   }
 
+  &-list-wrapper {
+    overflow-x: auto;
+    margin: 0;
+	}
+
   &__list {
     list-style-type: none;
     display: flex;
-    overflow-x: auto;
     justify-items: flex-start;
-    padding-left: 0;
+    padding: 0 50px 0 0;
     margin: 0;
-
-    @include media_interval($media_mobile, $media_laptop) {
-      margin-right: -40px;
-    }
-
-    @include media_interval(0, $media_mobile) {
-      margin-left: 10px;
-    }
+		width: min-content;
   }
 
   &__bottom {

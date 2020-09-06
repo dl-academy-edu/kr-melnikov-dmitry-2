@@ -145,8 +145,9 @@
   }
 
   &__burger-button {
+    width: 40px;
     position: absolute;
-    left: 47%;
+    left: calc(50% - 20px);
 
     @include media_interval(0, $media_mobile) {
       left: 44%;

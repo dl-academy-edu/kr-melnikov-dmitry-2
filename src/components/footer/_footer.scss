@@ -7,7 +7,7 @@
   padding: 100px 0;
 
   @include media_interval(0, $media_tablet) {
-    padding: 80px 0 50px;
+    padding: 80px 0;
   }
 
   @include media_interval(0, $media_mobile) {

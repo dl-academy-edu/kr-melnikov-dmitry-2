@@ -9,12 +9,27 @@
   margin-top: 55px;
   margin-bottom: 30px;
 
+  @include media_interval($media_mobile, $media_tablet) {
+    margin-top: 45px;
+    margin-bottom: 11px;
+  }
+
+  @include media_interval(0, $media_mobile) {
+    margin-top: 34px;
+    margin-bottom: 11px;
+  }
+
   &__list {
     list-style-type: none;
     display: flex;
     flex-wrap: wrap;
-    justify-items: flex-start;
+    justify-items: center;
+    justify-content: space-between;
     padding-left: 0;
-    margin: 0;
+    margin: 0 10px;
+
+    @include media_interval(0, $media_mobile) {
+      justify-content: space-around;
+    }
   }
 }

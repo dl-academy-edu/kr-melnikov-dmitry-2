@@ -3,23 +3,7 @@
 @import "../mixins";
 
 .category-card {
-  position: relative;
-  min-width: 280px;
-  height: 270px;
-  margin: 10px;
-
-  @include media_interval($media_mobile, $media_tablet) {
-    min-width: 258px;
-    height: 249px;
-  }
-
-  @include media_interval(0, $media_mobile) {
-    min-width: 247px;
-    height: 238px;
-    margin: 10px 8px;
-  }
-
-  &__link {
+    &__link {
     position: relative;
     height: 100%;
     width: 100%;

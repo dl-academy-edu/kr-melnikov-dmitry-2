@@ -126,7 +126,6 @@
 
 .checkbox {
   display: flex;
-  margin-bottom: 15px;
 
   &__label {
     font-family: "Open Sans";
@@ -140,6 +139,11 @@
     align-items: center;
     user-select: none;
     padding-left: 0;
+
+    @include media_interval(0, $media_mobile) {
+      font-size: 14px;
+      line-height: 19px;
+    }
     
 
     &:hover {
@@ -156,6 +160,12 @@
       border-radius: 3px;
       margin-right: 10px;
       transition: all $tr_duration $tr_easing;
+
+      @include media_interval(0, $media_mobile) {
+        width: 17px;
+        height: 17px;
+        margin-right: 7px;
+      }
     }
 
     &_modal {
@@ -227,7 +237,7 @@
 
 .radio {
   display: flex;
-  margin-bottom: 10px;
+  margin-bottom: 5px;
 
   &__lable {
     margin-right: auto;
@@ -245,6 +255,11 @@
     padding-left: 0;
     position: relative;
 
+    @include media_interval(0, $media_mobile) {
+      font-size: 14px;
+      line-height: 19px;
+    }
+
     &:hover {
       cursor: pointer;
       text-decoration-line: underline;
@@ -260,6 +275,12 @@
       border-radius: 50%;
 
       margin-right: 10px;
+
+      @include media_interval(0, $media_mobile) {
+        width: 16px;
+        height: 16px;
+        margin-right: 7px;
+      }
     }
   }
 
@@ -282,6 +303,14 @@
     background-color: $c_brown;
 
     border-radius: 50%;
+
+    @include media_interval(0, $media_mobile) {
+      width: 9.6px;
+      height: 9.6px;
+
+      left: 3.5px;
+      bottom: 4px;
+    }
   }
 
   &__input:disabled + .radio__lable {

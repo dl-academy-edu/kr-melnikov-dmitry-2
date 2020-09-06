@@ -27,10 +27,23 @@
     border: none;
     background-color: transparent;
     top: 22px;
-    left: 0;
-    right: 0;
-    margin-left: auto;
-    margin-right: auto;
+
+    @include media_interval($media_mobile, $media_tablet) {
+      top: 35px;
+      left: calc(50% - 16px);
+    }
+
+    @include media_interval($media_mobile-medium, $media_mobile) {
+      left: calc(50% - 26px);
+    }
+
+    @include media_interval($media_mobile-small, $media_mobile-medium) {
+      left: calc(50% - 30px);
+    }
+
+    @include media_interval(0, $media_mobile-small) {
+      left: calc(50% - 22px);
+    }
   }
   
   &__inner {
