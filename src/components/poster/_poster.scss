@@ -12,11 +12,11 @@
 
   &__content {
     display: flex;
+    flex-wrap: wrap;
     position: relative;
     padding-top: 106px;
     padding-left: 29px;
     padding-bottom: 89px;
-    min-width: 340px;
   
     background: linear-gradient(
       to bottom,
@@ -52,6 +52,7 @@
   }
 
   &__useful {
+    z-index: 1;
     order: 2;
     margin: 0;
     padding: 0;
@@ -82,10 +83,18 @@
     
       color: $c_black--light;
 
-      @include media_interval(0, $media_mobile) {
+      @include media_interval(315, $media_mobile) {
         font-size: 36px;
         line-height: 40px;
         margin-bottom: 0;
+        max-width: 276px;
+      }
+
+      @include media_interval(0, 315) {
+        font-size: 28px;
+        line-height: 32px;
+        margin-bottom: 0;
+        max-width: 210px;
       }
     }
 

@@ -30,6 +30,7 @@
   &__logo {
     margin-top: 4px;
     outline: none;
+    transition: opacity $tr_duration $tr_easing;
 
     &:hover {
       opacity: 0.5;
@@ -117,7 +118,7 @@
     margin-top: 0;
     margin-bottom: 0;
     text-align: center;
-    transition: 0.3s;
+    transition: opacity $tr_duration $tr_easing;
     outline: none;
 
     color: $c_gray--dark;

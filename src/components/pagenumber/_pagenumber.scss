@@ -17,6 +17,7 @@
   &__list {
     list-style-type: none;
     display: flex;
+    flex-wrap: wrap;
     padding-left: 0;
     align-items: center;
     margin: 0;
@@ -31,6 +32,10 @@
 
       @include media_interval(0, $media_mobile) {
         margin: 0 25px;
+      }
+
+      @include media_interval(0, 323) {
+        margin: 0 auto;
       }
 
       &:first-child {

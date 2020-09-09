@@ -5,8 +5,17 @@
 .button-close {
   display: none;
 }
+
+.path {
+  &__title {
+    @include media_interval($media_tablet, 0) {
+      word-spacing: 11px;
+    }
+  }
+}
+
 .contact-us {
-  margin-top: 50px;
+  margin-top: 48px;
   margin-bottom: 60px;
   display: flex;
   justify-content: space-between;
@@ -14,15 +23,15 @@
   @include media_interval(0, $media_laptop) {
     flex-direction: column-reverse;
     margin-top: 44px;
-  }
-
-  @include media_interval(0, $media_mobile) {
-    margin-top: 26px;
     margin-bottom: 50px;
   }
 
+  @include media_interval(0, $media_mobile) {
+    margin: 25px 20px 50px;
+  }
+
   &__form {
-    padding: 20px 40px 42px;
+    padding: 23px 40px 42px;
     background-color: #e5eaf8;
     max-width: 680px;
     width: 100%;
@@ -31,16 +40,29 @@
 
     @include media_interval($media_mobile, $media_laptop) {
       margin-top: 44px;
-      padding: 20px 50px 40px 60px;
+      padding: 22px 55px 42px;
     }
 
     @include media_interval(0, $media_mobile) {
-      margin-top: 25px;
-      padding: 11px 25px 25px;
+      margin-top: 26px;
+      padding: 10px 25px 25px;
     }
 
     &-button {
+      min-width: 106px;
       margin-top: 20px;
+      padding: 9px 22px;
+
+
+      @include media_interval($media_mobile, $media_laptop)  {
+        margin-top: 20px;
+      }
+
+      @include media_interval(0, $media_mobile) {
+        margin-top: 15px;
+        min-width: 98px;
+        padding-bottom: 10px;
+      }
     }
   
   }
@@ -80,6 +102,7 @@
 
       @include media_interval(0, $media_mobile) {
         font-size: 24px;
+        max-width: 330px;
       }
     }
 
