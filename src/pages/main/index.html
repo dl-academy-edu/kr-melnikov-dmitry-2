@@ -22,16 +22,18 @@
       @@include('poster/index.html')
       <section class="category container">
         <h2 class="category__title">CATEGORY PRODUCTS</h2>
-        <ul class="category__list">
-          @@include('category-card/index.html', { "link": "#1", "src":
-          "/static/images/apparel-kids.png", "name": "apparel kids" })
-          @@include('category-card/index.html', { "link": "#2", "src":
-          "/static/images/holiday-shop.png", "name": "holiday shop" })
-          @@include('category-card/index.html', { "link":
-          "/pages/toys/", "src": "/static/images/toys.png", "name":
-          "toys" }) @@include('category-card/index.html', { "link": "#4", "src":
-          "/static/images/accessories.png", "name": "accessories" })          
-        </ul>
+        <div class="category-list-wrapper">
+          <ul class="category__list">
+            @@include('category-card/index.html', { "link": "#1", "src":
+            "apparel-kids", "name": "apparel kids" })
+            @@include('category-card/index.html', { "link": "#2", "src":
+            "holiday-shop", "name": "holiday shop" })
+            @@include('category-card/index.html', { "link":
+            "/pages/toys/", "src": "toys", "name":
+            "toys" }) @@include('category-card/index.html', { "link": "#4", "src":
+            "accessories", "name": "accessories" })          
+          </ul>
+        </div>
         <div class="category__bottom">          
           <button
             class="button button_transparent category__bottom__button"

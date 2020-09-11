@@ -26,8 +26,9 @@
         "link":"/pages/grid", 
         "text":"grid" })
     </ul>
-  </nav>
+  </nav>  
   <button class="button button_transparent header__link header__burger-button button-open-menu_js">menu</button>
+  @@include('mobile-menu/index.html')
   <ul class="header__contacts">
     <li class="header__list-item">
       <button class="button button_transparent header__button_search">
@@ -37,5 +38,4 @@
     @@include('header/header__link.html', { "class":"header__link_last" ,
     "link":"/pages/contact-us", "text":"contact us" })
   </ul>
-  @@include('mobile-menu/index.html')
 </header>

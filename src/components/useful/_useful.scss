@@ -19,8 +19,10 @@
   }
 
   &__img {
+    width: 100%;
+    height: 100%;
 
-    @include media_interval($media_tablet, $media_laptop) {
+    @include media_interval($media_tablet, 0) {
       max-width: 480px;
       max-height: 559px;
     }
@@ -106,7 +108,8 @@
       font-weight: normal;
       font-size: 26px;
       line-height: 32px;
-      width: 326px;
+      width: 100%;
+      max-width: 326px;
       margin: 0;
       text-align: start;
       text-transform: capitalize;
@@ -120,7 +123,7 @@
       @include media_interval(0, $media_tablet) {
         font-size: 24px;
         line-height: 30px;
-        width: 267px;
+        max-width: 267px;
         padding: 8px 0 7px 20px;
       }
 

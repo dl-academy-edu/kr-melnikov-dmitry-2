@@ -46,18 +46,36 @@
           <h2 class="category__title hidden">category's catalog</h2>
         </a>
         <ul class="category__list">
-          @@include('category-card/index.html', { "link": "#1", "src":
-          "/static/images/apparel-kids.png", "name": "apparel kids" })
-          @@include('category-card/index.html', { "link": "#2", "src":
-          "/static/images/holiday-shop.png", "name": "holiday shop" })
-          @@include('category-card/index.html', { "link":
-          "/pages/toys/", "src": "/static/images/toys.png", "name":
-          "toys" }) @@include('category-card/index.html', { "link": "#4", "src":
-          "/static/images/accessories.png", "name": "accessories" })
-          @@include('category-card/index.html', { "link": "#5", "src":
-          "/static/images/sale.png", "name": "sale" })
-          @@include('category-card/index.html', { "link": "#6", "src":
-          "/static/images/apparel-adults.png", "name": "apparel adults" })
+          @@include('category-card/index.html', { 
+            "link": "#1", 
+            "src": "apparel-kids", 
+            "name": "apparel kids" 
+          })
+          @@include('category-card/index.html', { 
+            "link": "#2", 
+            "src": "holiday-shop", 
+            "name": "holiday shop" 
+          })
+          @@include('category-card/index.html', { 
+            "link": "/pages/toys/", 
+            "src": "toys", 
+            "name": "toys" 
+          }) 
+          @@include('category-card/index.html', { 
+            "link": "#4", 
+            "src": "accessories", 
+            "name": "accessories" 
+          })
+          @@include('category-card/index.html', { 
+            "link": "#5", 
+            "src": "sale", 
+            "name": "sale" 
+          })
+          @@include('category-card/index.html', { 
+            "link": "#6", 
+            "src": "apparel-adults", 
+            "name": "apparel adults" 
+          })
         </ul>
       </section>
       <section class="description container">
@@ -81,5 +99,6 @@
       </section>
     </main>
     @@include('footer/index.html')
+    <script src="/static/images/mobile-menu.js"></script>
   </body>
 </html>

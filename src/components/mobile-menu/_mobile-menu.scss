@@ -7,6 +7,18 @@
 
   .mobile-menu {
     top: 0;
+
+    &__button-close-menu {
+      display: block;
+    }
+
+    &__head-list__item {
+      display: block;
+    }
+
+    &__nav-list__item {
+      display: block;
+    }
   }
 }
 
@@ -20,17 +32,49 @@
   background-color: rgba($c_blue, 0.8);
   transition: top $tr_duration $tr_easing;
 
+  &__logo {
+    outline: none;
+    transition: opacity $tr_duration $tr_easing;
+
+    &:hover {
+      opacity: 0.5;
+    }
+
+    &:focus {
+      opacity: 0.5;
+    }
+
+    &:active {
+      opacity: 0.2;
+    }
+  }
+
+
   &__button-close-menu {
+    display: none;
     position: absolute;
     width: 32px;
     height: 32px;
     border: none;
     background-color: transparent;
     top: 22px;
-    left: 0;
-    right: 0;
-    margin-left: auto;
-    margin-right: auto;
+
+    @include media_interval($media_mobile, $media_tablet) {
+      top: 35px;
+      left: calc(50% - 16px);
+    }
+
+    @include media_interval($media_mobile-medium, $media_mobile) {
+      left: calc(50% - 26px);
+    }
+
+    @include media_interval($media_mobile-small, $media_mobile-medium) {
+      left: calc(50% - 30px);
+    }
+
+    @include media_interval(0, $media_mobile-small) {
+      left: calc(50% - 22px);
+    }
   }
   
   &__inner {
@@ -56,6 +100,10 @@
     margin: 0;
     padding: 25px 30px 26px;
     min-width: 130px;
+
+    &__item {      
+      display: none;
+    }
   }
 
   &__nav-list {
@@ -66,7 +114,8 @@
     padding: 20px 0 25px;
     min-width: 130px;
 
-    &__item {
+    &__item {      
+      display: none;
       margin-bottom: 20px;
 
       &:last-child {
@@ -82,15 +131,27 @@
     font-weight: normal;
     font-size: 16px;
     line-height: 22px;
-
+    outline: none;
     text-align: center;
     text-transform: uppercase;
-
+    transition: opacity $tr_duration $tr_easing;
 
     color: $c_black--light;
 
     &_bold{
       font-weight: bold;
+    }
+
+    &:hover {
+      opacity: 0.5;
+    }
+
+    &:focus {
+      opacity: 0.5;
+    }
+
+    &:active {
+      opacity: 0.2;
     }
   }
 }

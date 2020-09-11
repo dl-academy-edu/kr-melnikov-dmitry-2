@@ -8,7 +8,7 @@
   flex-wrap: wrap;
   align-items: center;
   padding-top: 46px;
-  padding-right: 17px;
+  padding-right: 10px;
   margin-bottom: 50px;
 
   @include media_interval(0, $media_tablet) {
@@ -30,6 +30,7 @@
   &__logo {
     margin-top: 4px;
     outline: none;
+    transition: opacity $tr_duration $tr_easing;
 
     &:hover {
       opacity: 0.5;
@@ -117,7 +118,7 @@
     margin-top: 0;
     margin-bottom: 0;
     text-align: center;
-    transition: 0.3s;
+    transition: opacity $tr_duration $tr_easing;
     outline: none;
 
     color: $c_gray--dark;
@@ -125,6 +126,8 @@
     &_last {
       margin: -1px 0 0 0;
       padding: 0;
+      word-spacing: 3px;
+      font-weight: bold;
 
       @include media_interval(0, $media_tablet) {
         display: none;
@@ -145,8 +148,9 @@
   }
 
   &__burger-button {
+    width: 40px;
     position: absolute;
-    left: 47%;
+    left: calc(50% - 20px);
 
     @include media_interval(0, $media_mobile) {
       left: 44%;

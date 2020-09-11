@@ -1,12 +1,17 @@
 <li class="product-card">
   <a class="product-card__link" href="@@link">
-    <img
-      class="product-card__link__img"
-      src="@@src"
-      alt="@@title"
-      width="380"
-      height="385"
-    />
+    <picture class="product-card__link__img">
+      <source srcset="/static/images/@@src.png, /static/images/@@src_2x.png 2x" media="(min-width: 1024px)">
+      <source srcset="/static/images/@@src-tablet.png" media="(min-width: 465px) and (max-width: 1023px)">
+      <source srcset="/static/images/@@src-mobile.png" media="(max-width: 464px)">
+      <img
+        class="product-card__link__img"
+        src="/static/images/@@src.png"
+        alt="@@title"
+        width="380"
+        height="385"
+        />
+    </picture>
     <div class="product-card__modal">
       <span class="product-card__modal__text">learn more</span>
     </div>
