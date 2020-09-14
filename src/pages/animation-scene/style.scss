@@ -1,1 +1,58 @@
+@import "../../components/vars";
+@import "../../components/mixins";
 
+.animation {
+  margin: 50px auto;
+  max-width: 1400px;
+  overflow: hidden;  
+
+  @include media_interval($media_mobile, $media_tablet) {
+    margin: 30px auto;
+  }
+
+  @include media_interval(0, $media_mobile) {
+    margin: 20px auto;   
+  }
+
+  &__workspace {
+    width: 100%;
+    height: auto;
+  }
+}
+
+.car-1 {
+
+}
+
+.car-2 {
+  
+}
+
+.car-3 {
+  
+}
+
+.car-4 {
+  
+}
+
+.taxi {
+
+}
+
+.hand {
+  transform: rotateX(45deg);
+  transform-origin: right bottom;
+}
+
+.text-1 {
+  opacity: 0;
+}
+
+.text-2 {
+  opacity: 0;
+}
+
+.text-3 {
+  opacity: 0;
+}

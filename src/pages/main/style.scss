@@ -139,6 +139,7 @@
       }
 
       @include media_interval($media_mobile, $media_tablet) {
+        max-width: 550px;
         margin-left: 13px;
       }
 
