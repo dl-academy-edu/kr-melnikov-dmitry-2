@@ -345,7 +345,7 @@
       animation-timing-function: linear;
       animation-name: animation_bottom-sky;
       animation-duration: 12s;
-      animation-iteration-count: round($number: 3);
+      animation-iteration-count: round($number: 5);
     }
 
     &__sun {
@@ -353,7 +353,7 @@
       animation-timing-function: linear;
       animation-name: animation_bottom-sun;
       animation-duration: 12s;
-      animation-iteration-count: round($number: 3);
+      animation-iteration-count: round($number: 5);
     }
 
     &__mountain-1 {
@@ -361,7 +361,7 @@
       animation-timing-function: linear;
       animation-name: animation_bottom-mountain-1;
       animation-duration: 12s;
-      animation-iteration-count: round($number: 3);
+      animation-iteration-count: round($number: 5);
     }
 
     &__mountain-2 {
@@ -369,7 +369,7 @@
       animation-timing-function: linear;
       animation-name: animation_bottom-mountain-2;
       animation-duration: 12s;
-      animation-iteration-count: round($number: 3);
+      animation-iteration-count: round($number: 5);
     }
 
     &__stroke-1 {
@@ -377,8 +377,8 @@
       animation-timing-function: ease-in-out;
       animation-name: animation_stroke;
       transform: translateX(-150%) scale(2.25);
-      animation-iteration-count: round($number: 3);
-      animation-duration: 5s;
+      animation-iteration-count: round($number: 2);
+      animation-duration: 8s;
     }
 
     &__stroke-2 {
@@ -387,7 +387,7 @@
       animation-name: animation_stroke;
       transform: translateX(-150%) scale(2.25);
       animation-iteration-count: round($number: 3);
-      animation-duration: 5s;
+      animation-duration: 8s;
       animation-delay: 0.5s;
     }   
     

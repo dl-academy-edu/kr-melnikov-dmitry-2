@@ -312,7 +312,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    transition: 0.3s;
+    transition: color $tr_duration $tr_easing, bacground-color $tr_duration $tr_easing;
 
     background-color: $c_white;
 
