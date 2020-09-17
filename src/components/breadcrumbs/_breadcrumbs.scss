@@ -73,7 +73,7 @@
     font-size: 20px;
     line-height: 25px;
     text-transform: capitalize;
-    transition: 0.3s;
+    transition: text-decoration-line $tr_duration $tr_easing, opacity $tr_duration $tr_easing;
     outline: none;
 
     min-width: 35px;

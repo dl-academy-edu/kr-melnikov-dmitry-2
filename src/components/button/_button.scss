@@ -15,7 +15,7 @@
   border: none;
   outline: none;
   cursor: pointer;
-  transition: 0.3s;
+  transition: background-color $tr_duration $tr_easing, opacity $tr_duration $tr_easing;
 
   @include media_interval(0, $media_mobile) {
     font-size: 14px;

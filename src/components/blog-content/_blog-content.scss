@@ -111,7 +111,7 @@
       color: $c_black--light;
 
       margin: 10px 0;
-      transition: 0.3s;
+      transition: text-decoration-line $tr_duration $tr_easing;
       outline: none;
 
       @include media_interval(0, $media_mobile) {

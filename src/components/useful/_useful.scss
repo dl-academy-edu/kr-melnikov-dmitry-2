@@ -5,7 +5,7 @@
 .useful {
   display: flex;
   margin-top: 90px;
-  margin-bottom: 86px;
+  margin-bottom: 90px;
 
   @include media_interval($media_mobile, $media_tablet) {
     margin-top: 61px;

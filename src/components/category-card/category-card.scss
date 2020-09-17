@@ -2,7 +2,7 @@
 @import "../vars";
 @import "../mixins";
 
-.category-card {
+.category__card {
     &__link {
     position: relative;
     height: 100%;
@@ -70,6 +70,6 @@
     text-transform: uppercase;
     color: $c_white;
     text-shadow: 0px 0px 40px rgba($c_red, 0.25);
-    transition: 0.3s;
+    transition: text-decoration-line $tr_duration $tr_easing;
   }
 }

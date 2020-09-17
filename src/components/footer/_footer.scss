@@ -66,7 +66,7 @@
     color: $c_white;
     margin-bottom: 15px;
     margin-top: 0;
-    transition: 0.3s;
+    transition: opacity $tr_duration $tr_easing;
     outline: none;
 
     @include media_interval(0, $media_mobile) {
@@ -89,7 +89,7 @@
     &_gray {
       color: $c_gray--footer-link;
       opacity: 1;
-      transition: 0.3s;
+      transition: opacity $tr_duration $tr_easing, text-decoration-line $tr_duration $tr_easing;
 
       &:hover {
         text-decoration-line: underline;
@@ -414,7 +414,6 @@
       margin-top: 1px;
       margin-right: 0;
       text-align: center;
-      transition: 0.3s;
     }
   }
 }
