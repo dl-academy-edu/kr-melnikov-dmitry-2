@@ -334,4 +334,11 @@
     color: $c_black--light;
     background-color: #f3d0db;
   }
+
+  &__input:disabled ~ .button-radio__text {
+    cursor: default;
+    color: $c_black--light;
+    background-color: #eddeeb;
+    opacity: 0.7;
+  }
 }
